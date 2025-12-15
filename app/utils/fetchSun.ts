@@ -1,3 +1,5 @@
+import moment from "moment";
+
 export type Location = "cph" | "cdmx";
 type SunEvent = "sunrise" | "sunset";
 
@@ -36,7 +38,9 @@ async function fetchSun({ location }: Props): Promise<SunData | null> {
   return { sunrise, sunset };
 }
 
-const getNextSunEvent = (sunData: SunData): SunEvent => {
+const getNextSunEvent = (
+  sunData: SunData
+): { event: SunEvent; time: string; fromNow: string } => {
   const now = new Date();
 
   const today = now.toISOString().split("T")[0];
@@ -44,11 +48,23 @@ const getNextSunEvent = (sunData: SunData): SunEvent => {
   const sunsetDate = new Date(`${today} ${sunData.sunset}`);
 
   if (now < sunriseDate) {
-    return "sunrise";
+    return {
+      event: "sunrise",
+      time: sunData.sunrise,
+      fromNow: moment(sunriseDate).fromNow(),
+    };
   } else if (now < sunsetDate) {
-    return "sunset";
+    return {
+      event: "sunset",
+      time: sunData.sunset,
+      fromNow: moment(sunsetDate).fromNow(),
+    };
   } else {
-    return "sunrise";
+    return {
+      event: "sunrise",
+      time: sunData.sunrise,
+      fromNow: moment(sunriseDate).add(1, "day").fromNow(),
+    };
   }
 };
 
@@ -60,7 +76,10 @@ export const getSunString = async (
   if (!sunData) return null;
 
   const nextEvent = getNextSunEvent(sunData);
-  const eventTime = nextEvent === "sunrise" ? sunData.sunrise : sunData.sunset;
 
-  return { type: nextEvent, time: eventTime, countDown: "11:20:03" };
+  return {
+    type: nextEvent.event,
+    time: nextEvent.time,
+    countDown: nextEvent.fromNow,
+  };
 };
