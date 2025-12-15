@@ -1,3 +1,4 @@
+import BackgroundTexture from "./components/BackgroundTexture";
 import SunCount from "./components/SunCount";
 import Image from "next/image";
 
@@ -39,11 +40,7 @@ export default async function Home() {
           <p>Showroom sign up</p>
         </div>
       </footer>
-      <div className="fixed top-0 left-0 w-full h-full overflow-hidden  -z-10">
-        <video autoPlay muted loop className="w-full h-full object-cover">
-          <source src="/video-texture-compressed.mp4" type="video/mp4" />
-        </video>
-      </div>
+      <BackgroundTexture />
     </>
   );
 }
