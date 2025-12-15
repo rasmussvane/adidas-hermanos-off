@@ -26,14 +26,15 @@ export default async function Home() {
           </ul>
         </div>
       </main>
-      <footer className="absolute bottom-0 left-0 w-full flex justify-between p-4">
-        <Image
-          src="/logo.svg"
-          alt=""
-          width={137}
-          height={58}
-          className="mix-blend-plus-lighter"
-        />
+      <footer className="absolute bottom-0 left-0 w-full flex justify-between p-4 items-center">
+        <figure style={{ width: 137, height: 58 }} className="relative">
+          <Image
+            src="/logo.svg"
+            alt=""
+            fill
+            className="mix-blend-plus-lighter object-contain object-bottom"
+          />
+        </figure>
         <div className="text-center text-lg leading-none">
           <p>Showroom sign up</p>
         </div>
