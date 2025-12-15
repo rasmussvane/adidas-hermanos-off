@@ -30,3 +30,16 @@ p::selection {
   background-color: var(--foreground);
   color: var(--background);
 }
+
+.blur-mask {
+  position: relative;
+}
+
+.blur-mask::after {
+  --blur-amount: 5px;
+  content: "";
+  position: absolute;
+  inset: calc(var(--blur-amount) * -1);
+  backdrop-filter: blur(var(--blur-amount));
+  mask-image: linear-gradient(to bottom, transparent, black);
+}

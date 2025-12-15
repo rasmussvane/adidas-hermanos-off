@@ -11,24 +11,18 @@ export default async function Home() {
       <main>
         <div className="w-full h-screen flex justify-center items-center">
           <ul className="text-7xl leading-none text-center">
-            <li>
-              <p>Adidas</p>
-            </li>
-            <li>
-              <p>HERMANOS</p>
-            </li>
-            <li>
-              <p>KOUMORI</p>
-            </li>
-            <li>
-              <p>COPENHAGEN</p>
-            </li>
-            <li>
-              <p>Showroom</p>
-            </li>
-            <li>
-              <p>27.01.26</p>
-            </li>
+            {[
+              "Adidas",
+              "HERMANOS",
+              "KOUMORI",
+              "COPENHAGEN",
+              "Showroom",
+              "27.01.26",
+            ].map((text, index) => (
+              <li key={index}>
+                <p className="blur-mask">{text}</p>
+              </li>
+            ))}
           </ul>
         </div>
       </main>
