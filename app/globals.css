@@ -36,10 +36,15 @@ p::selection {
 }
 
 .blur-mask::after {
-  --blur-amount: 5px;
+  --blur: 4px;
   content: "";
   position: absolute;
-  inset: calc(var(--blur-amount) * -1);
-  backdrop-filter: blur(var(--blur-amount));
-  mask-image: linear-gradient(to bottom, transparent, black);
+  inset: calc(-1 * var(--blur));
+  backdrop-filter: blur(var(--blur));
+  mask-image: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 30%,
+    black 80%
+  );
 }
