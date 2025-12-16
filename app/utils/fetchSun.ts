@@ -18,24 +18,27 @@ const locations: Record<Location, { lat: number; lng: number }> = {
 };
 
 async function fetchSun({ location }: Props): Promise<SunData | null> {
-  const { lat, lng } = locations[location];
-  const response = await fetch(
-    `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`
-  );
+  try {
+    const { lat, lng } = locations[location];
+    const response = await fetch(
+      `https://api.met.no/weatherapi/sunrise/3.0/sun?lat=${lat}&lon=${lng}`
+    );
 
-  if (!response.ok) return null;
+    if (!response.ok) return null;
 
-  const data = await response.json();
-  const results = data?.results;
+    const data = await response.json();
+    if (!data || !data.properties) return null;
 
-  if (results.ok) return null;
+    const sunrise = data.properties.sunrise.time;
+    const sunset = data.properties.sunset.time;
 
-  const sunrise = results?.sunrise;
-  const sunset = results?.sunset;
+    if (!sunrise || !sunset) return null;
 
-  if (!sunrise || !sunset) return null;
-
-  return { sunrise, sunset };
+    return { sunrise, sunset };
+  } catch (error) {
+    console.error("Error fetching sun data:", error);
+    return null;
+  }
 }
 
 const getNextSunEvent = (
@@ -43,9 +46,8 @@ const getNextSunEvent = (
 ): { event: SunEvent; time: string; fromNow: string } => {
   const now = new Date();
 
-  const today = now.toISOString().split("T")[0];
-  const sunriseDate = new Date(`${today} ${sunData.sunrise}`);
-  const sunsetDate = new Date(`${today} ${sunData.sunset}`);
+  const sunriseDate = new Date(sunData.sunrise);
+  const sunsetDate = new Date(sunData.sunset);
 
   if (now < sunriseDate) {
     return {
