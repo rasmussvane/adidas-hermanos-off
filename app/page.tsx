@@ -41,12 +41,12 @@ export default async function Home() {
         </div>
       </footer>
       <BackgroundTexture />
-      <svg>
+      <svg className="absolute w-0 h-0">
         <defs>
           <filter id="grain" x="0" y="0" width="100%" height="100%">
             <feTurbulence
               type="fractalNoise"
-              baseFrequency="0.9"
+              baseFrequency="0.5"
               numOctaves="4"
               stitchTiles="stitch"
             />
