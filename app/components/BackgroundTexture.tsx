@@ -5,6 +5,8 @@ export default function BackgroundTexture() {
         autoPlay
         muted
         loop
+        playsInline
+        controls={false}
         className="w-full h-full object-cover"
         poster="/video-texture-compressed-poster.png"
       >
