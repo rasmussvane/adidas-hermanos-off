@@ -1,20 +1,23 @@
-import moment from "moment";
+import moment from "moment-timezone";
 import { getSunString, Location } from "../utils/fetchSun";
 
 type Props = {
   location: Location;
 };
 
+const TIME_ZONES = {
+  cdmx: "America/Mexico_City",
+  cph: "Europe/Copenhagen",
+};
+
 export default async function SunCount({ location }: Props) {
   const sunString = await getSunString(location);
-  const formattedTime = moment(sunString?.time, moment.ISO_8601).format(
-    "hh:mm A"
-  );
+  const localTime = moment().tz(TIME_ZONES[location]).format("HH:mm");
 
   return (
     <div className="text-center text-lg leading-none">
-      <p>{`${location.toUpperCase()} ${formattedTime}`}</p>
-      <p>{`${sunString?.type.toUpperCase()} ${sunString?.countDown}`}</p>
+      <p>{`${location} ${localTime}`}</p>
+      <p>{`${sunString?.type} ${sunString?.countDown}`}</p>
     </div>
   );
 }
