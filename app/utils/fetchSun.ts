@@ -7,17 +7,19 @@ type Props = {
   location: Location;
 };
 
-type SunData = {
+type SunTimeObject = {
   sunrise: string;
   sunset: string;
 };
+
+export type SunDataObject = { type: SunEvent; time: string; countDown: string };
 
 const locations: Record<Location, { lat: number; lng: number }> = {
   cph: { lat: 55.6761, lng: 12.5683 }, // Fixed coordinates for Copenhagen
   cdmx: { lat: 19.4326, lng: -99.1332 }, // Fixed coordinates for Mexico City
 };
 
-async function fetchSun({ location }: Props): Promise<SunData | null> {
+async function fetchSun({ location }: Props): Promise<SunTimeObject | null> {
   const { lat, lng } = locations[location];
   const response = await fetch(
     `https://api.sunrise-sunset.org/json?lat=${lat}&lng=${lng}&date=today`
@@ -39,7 +41,7 @@ async function fetchSun({ location }: Props): Promise<SunData | null> {
 }
 
 const getNextSunEvent = (
-  sunData: SunData
+  sunData: SunTimeObject
 ): { event: SunEvent; time: string; fromNow: string } => {
   const now = new Date();
 
@@ -70,7 +72,7 @@ const getNextSunEvent = (
 
 export const getSunString = async (
   location: Location
-): Promise<{ type: SunEvent; time: string; countDown: string } | null> => {
+): Promise<SunDataObject | null> => {
   const sunData = await fetchSun({ location });
 
   if (!sunData) return null;

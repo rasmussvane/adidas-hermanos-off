@@ -1,11 +1,23 @@
-import { getSunString, Location } from "../utils/fetchSun";
+"use client";
+
+import { useEffect, useState } from "react";
+import { getSunString, Location, SunDataObject } from "../utils/fetchSun";
 
 type Props = {
   location: Location;
 };
 
-export default async function SunCount({ location }: Props) {
-  const sunString = await getSunString(location);
+export default function SunCount({ location }: Props) {
+  const [sunString, setSunString] = useState<SunDataObject>();
+
+  useEffect(() => {
+    getSunString(location).then((data) => {
+      if (!data) return;
+      setSunString(data);
+    });
+  }, [location]);
+
+  if (!sunString) return null;
 
   return (
     <div className="text-center text-lg leading-none">
