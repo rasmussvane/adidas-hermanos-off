@@ -1,17 +1,27 @@
+import classNames from "classnames";
+
+const gradients = 5;
+
 export default function BackgroundTexture() {
   return (
-    <div className="fixed top-0 left-0 w-full h-full overflow-hidden  -z-10">
-      <video
-        autoPlay
-        muted
-        loop
-        playsInline
-        controls={false}
-        className="w-full h-full object-cover"
-        poster="/video-texture-compressed-poster.png"
-      >
-        <source src="/video-texture-compressed.mp4" type="video/mp4" />
-      </video>
+    <div className="fixed inset-0 -z-10">
+      <div
+        className="absolute inset-0 bg-blend-multiply"
+        style={{ filter: "url(#grain)" }}
+      />
+      {Array.from({ length: gradients }).map((_, index) => {
+        const zIndex = (index + 1) * -1;
+        const gradient = `sun-${index + 1}`;
+        return (
+          <div
+            key={index}
+            className={classNames("absolute inset-0", gradient)}
+            style={{
+              zIndex,
+            }}
+          />
+        );
+      })}
     </div>
   );
 }
