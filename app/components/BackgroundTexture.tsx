@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { useRef } from "react";
 
 const animationClass = "gradient";
-const duration = 6;
+const duration = 30;
 
 export default function BackgroundTexture() {
   const ref = useRef<HTMLDivElement>(null);
