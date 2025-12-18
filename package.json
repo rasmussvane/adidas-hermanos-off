@@ -9,7 +9,9 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "classnames": "^2.5.1",
+    "gsap": "^3.14.2",
     "moment": "^2.30.1",
     "moment-timezone": "^0.6.0",
     "next": "16.0.10",

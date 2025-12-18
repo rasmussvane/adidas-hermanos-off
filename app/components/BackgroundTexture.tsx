@@ -1,27 +1,55 @@
-import classNames from "classnames";
+"use client";
 
-const gradients = 5;
+import { useGSAP } from "@gsap/react";
+import { gsap } from "gsap";
+import classNames from "classnames";
+import { useRef } from "react";
+
+const animationClass = "gradient";
+const duration = 6;
 
 export default function BackgroundTexture() {
+  const ref = useRef<HTMLDivElement>(null);
+
+  useGSAP(
+    () => {
+      const boxNodes =
+        ref.current?.querySelectorAll(`.${animationClass}`) ?? [];
+      const boxArray = [...boxNodes].reverse().slice(0, -1);
+
+      gsap.to(boxArray, {
+        opacity: 0,
+        duration,
+        stagger: duration,
+        repeat: -1,
+        yoyo: true,
+        repeatDelay: duration,
+      });
+    },
+    { scope: ref }
+  );
+
   return (
     <div className="absolute inset-0 -z-10">
       <div
         className="absolute inset-0 bg-blend-multiply"
         style={{ filter: "url(#grain)" }}
       />
-      {Array.from({ length: gradients }).map((_, index) => {
-        const zIndex = (index + 1) * -1;
-        const gradient = `sun-${index + 1}`;
-        return (
-          <div
-            key={index}
-            className={classNames("absolute inset-0", gradient)}
-            style={{
-              zIndex,
-            }}
-          />
-        );
-      })}
+      <div ref={ref}>
+        {Array.from({ length: 5 }).map((_, index) => {
+          const gradient = `sun-${index + 1}`;
+          return (
+            <div
+              key={index}
+              className={classNames(
+                "absolute inset-0",
+                gradient,
+                animationClass
+              )}
+            />
+          );
+        })}
+      </div>
     </div>
   );
 }
