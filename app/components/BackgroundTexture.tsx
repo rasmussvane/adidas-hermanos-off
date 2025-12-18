@@ -6,7 +6,7 @@ import classNames from "classnames";
 import { useRef } from "react";
 
 const animationClass = "gradient";
-const duration = 30;
+const duration = 6;
 
 export default function BackgroundTexture() {
   const ref = useRef<HTMLDivElement>(null);
@@ -20,7 +20,6 @@ export default function BackgroundTexture() {
       gsap.to(boxArray, {
         opacity: 0,
         duration,
-        stagger: duration,
         repeat: -1,
         yoyo: true,
         repeatDelay: duration,
