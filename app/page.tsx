@@ -1,14 +1,14 @@
 import BackgroundTexture from "./components/BackgroundTexture";
 import GradientFilter from "./components/GrainFilter";
-import SunCount from "./components/SunCount";
+import SunTimer from "./components/SunTimer";
 import Image from "next/image";
 
 export default async function Home() {
   return (
     <>
       <header className="absolute top-0 left-0 w-full flex justify-between p-4">
-        <SunCount location="cdmx" />
-        <SunCount location="cph" />
+        <SunTimer location="cdmx" />
+        <SunTimer location="cph" />
       </header>
       <main>
         <div className="w-full h-screen flex justify-center items-center">

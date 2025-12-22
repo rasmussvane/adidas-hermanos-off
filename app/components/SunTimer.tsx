@@ -10,7 +10,7 @@ const TIME_ZONES = {
   cph: "Europe/Copenhagen",
 };
 
-export default async function SunCount({ location }: Props) {
+export default async function SunTimer({ location }: Props) {
   const sunString = await getSunString(location);
   const localTime = moment().tz(TIME_ZONES[location]).format("HH:mm");
 
