@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "tsc":  "tsc"
+    "lint:watch": "eslint --watch",
+    "tsc": "tsc",
+    "tsc:watch": "tsc --watch --noEmit",
+    "watch": "concurrently --names \"TypeScript,ESLint\" --prefix-colors \"blue,yellow\" \"npm run tsc:watch\" \"npm run lint:watch\"",
+    "dev:watch": "concurrently --names \"Next.js,TypeScript,ESLint\" --prefix-colors \"green,blue,yellow\" \"npm run dev\" \"npm run tsc:watch\" \"npm run lint:watch\""
   },
   "dependencies": {
     "@gsap/react": "^2.1.2",
@@ -24,6 +28,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "concurrently": "^9.2.1",
     "eslint": "^9",
     "eslint-config-next": "16.0.10",
     "tailwindcss": "^4",
