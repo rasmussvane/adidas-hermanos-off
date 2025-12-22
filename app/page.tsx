@@ -15,9 +15,9 @@ export default async function Home() {
           <ul className="text-7xl leading-none text-center">
             {[
               "Adidas",
-              "HERMANOS",
-              "KOUMORI",
-              "COPENHAGEN",
+              "Hermanos",
+              "Koumori",
+              "Copenhagen",
               "Showroom",
               "27.01.26",
             ].map((text, index) => (
