@@ -37,7 +37,7 @@ export default async function Home() {
           ))}
         </div>
         <div className="flex justify-center items-center min-h-screen">
-          <div className="font-sans text-center max-w-2/3 rich-text mix-blend-plus-lighter text-base/6">
+          <div className="max-w-none font-sans text-center rich-text mix-blend-plus-lighter text-base/6 md:max-w-2/3">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               auctor, ex id laoreet rhoncus, nisi urna accumsan ipsum, in
