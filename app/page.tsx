@@ -1,7 +1,5 @@
 import BackgroundTexture from "./components/BackgroundTexture";
 import FixedLayout from "./components/FixedLayout";
-import GradientFilter from "./components/GrainFilter";
-import SunTimer from "./components/SunTimer";
 import Image from "next/image";
 
 export default async function Home() {
@@ -58,7 +56,6 @@ export default async function Home() {
       </main>
       <FixedLayout />
       <BackgroundTexture />
-      <GradientFilter />
     </>
   );
 }
