@@ -68,11 +68,15 @@ export default async function Home() {
             className="object-contain object-bottom mix-blend-plus-lighter"
           />
         </figure>
-        <div className="text-lg leading-none text-center">
+        <div className="text-lg leading-none mix-blend-plus-lighter">
           <label htmlFor="signup-email">
-            <p className="mix-blend-plus-lighter">Showroom sign up</p>
+            <p>Showroom sign up</p>
           </label>
-          <input id="signup-email" type="email" />
+          <input
+            id="signup-email"
+            type="email"
+            className="border-b border-dashed border-b-foreground"
+          />
         </div>
       </footer>
       <BackgroundTexture />
