@@ -15,7 +15,7 @@ export default async function SunTimer({ location }: Props) {
   const localTime = moment().tz(TIME_ZONES[location]).format("HH:mm");
 
   return (
-    <div className="text-center text-lg leading-none">
+    <div className="text-lg leading-none text-center mix-blend-plus-lighter">
       <p>{`${location} ${localTime}`}</p>
       <p>{`${sunString?.type} ${sunString?.countDown}`}</p>
     </div>
