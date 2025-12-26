@@ -1,4 +1,5 @@
 import BackgroundTexture from "./components/BackgroundTexture";
+import FixedLayout from "./components/FixedLayout";
 import GradientFilter from "./components/GrainFilter";
 import SunTimer from "./components/SunTimer";
 import Image from "next/image";
@@ -55,30 +56,7 @@ export default async function Home() {
           </div>
         </div>
       </main>
-      <header className="flex absolute top-0 left-0 justify-between p-4 w-full font-seven-segments">
-        <SunTimer location="cdmx" />
-        <SunTimer location="cph" />
-      </header>
-      <footer className="flex absolute bottom-0 left-0 justify-between items-end p-4 w-full font-seven-segments">
-        <figure style={{ width: 137, height: 58 }} className="relative">
-          <Image
-            src="/logo.svg"
-            alt=""
-            fill
-            className="object-contain object-bottom mix-blend-plus-lighter"
-          />
-        </figure>
-        <div className="text-lg leading-none mix-blend-plus-lighter">
-          <label htmlFor="signup-email">
-            <p>Showroom sign up</p>
-          </label>
-          <input
-            id="signup-email"
-            type="email"
-            className="border-b border-dashed border-b-foreground"
-          />
-        </div>
-      </footer>
+      <FixedLayout />
       <BackgroundTexture />
       <GradientFilter />
     </>
