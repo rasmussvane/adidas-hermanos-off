@@ -53,10 +53,10 @@ export default function FixedLayout() {
           />
         </figure>
       </header>
-      <div className="absolute left-0 top-1/2 p-4 transform -translate-y-1/2 font-seven-segments mix-blend-plus-lighter">
+      <div className="flex absolute top-0 bottom-0 left-0 items-center p-4 font-seven-segments mix-blend-plus-lighter">
         <SunTimer location="cdmx" />
       </div>
-      <div className="absolute right-0 top-1/2 p-4 transform -translate-y-1/2 font-seven-segments mix-blend-plus-lighter">
+      <div className="flex absolute top-0 right-0 bottom-0 items-center p-4 font-seven-segments mix-blend-plus-lighter">
         <SunTimer location="cph" />
       </div>
       <footer className="flex absolute bottom-0 left-0 justify-center items-end p-4 w-full font-seven-segments">
