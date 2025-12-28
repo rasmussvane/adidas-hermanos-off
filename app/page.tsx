@@ -25,7 +25,7 @@ export default async function Home() {
           {Array.from({ length: 3 }).map((_, index) => (
             <figure
               key={index}
-              className="relative w-full max-w-sm aspect-image"
+              className="relative w-full max-w-sm aspect-image image-blur"
             >
               <Image
                 src="https://lipsum.app/random/1600x900"
