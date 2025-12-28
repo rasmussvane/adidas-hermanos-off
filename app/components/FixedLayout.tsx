@@ -2,6 +2,7 @@
 import { useWindowSize } from "@uidotdev/usehooks";
 import SunTimer from "./SunTimer";
 import Image from "next/image";
+import SignUp from "./SignUp";
 
 const mobileBreakPoints = 512; // Tailwind: Lg
 
@@ -61,14 +62,7 @@ export default function FixedLayout() {
       </div>
       <footer className="flex absolute bottom-0 left-0 justify-center items-end p-4 w-full font-seven-segments">
         <div className="text-lg leading-none text-center mix-blend-plus-lighter">
-          <label htmlFor="signup-email">
-            <p>Showroom sign up</p>
-          </label>
-          <input
-            id="signup-email"
-            type="email"
-            className="border-b border-dashed border-b-foreground"
-          />
+          <SignUp />
         </div>
       </footer>
     </>
