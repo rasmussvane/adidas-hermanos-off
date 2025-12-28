@@ -9,8 +9,7 @@ type Props = {
 
 export default function SunTimer({ location }: Props) {
   const { localTime, sunData, isLoading, error } = useSunTimer(location);
-  const warpperClass =
-    "text-lg leading-none text-center mix-blend-plus-lighter";
+  const warpperClass = "text-lg leading-none text-center";
 
   if (isLoading) return null;
 

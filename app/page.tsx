@@ -7,7 +7,7 @@ export default async function Home() {
   return (
     <>
       <main className="overflow-y-scroll h-screen">
-        <SectionLayout className="text-7xl text-center font-seven-segments leading-[0.9]">
+        <SectionLayout className="text-7xl text-center font-seven-segments leading-[0.9] mix-blend-plus-lighter">
           {[
             "Adidas",
             "Hermanos",
@@ -16,7 +16,7 @@ export default async function Home() {
             "Showroom",
             "27.01.26",
           ].map((text, index) => (
-            <p key={index} className="blur-mask mix-blend-plus-lighter">
+            <p key={index} className="blur-mask">
               {text}
             </p>
           ))}
@@ -36,8 +36,8 @@ export default async function Home() {
             </figure>
           ))}
         </SectionLayout>
-        <SectionLayout >
-          <div className="max-w-none font-sans text-center rich-text mix-blend-plus-lighter text-base/6 md:max-w-2/3">
+        <SectionLayout className="mix-blend-plus-lighter">
+          <div className="max-w-none font-sans text-center rich-text text-base/6 md:max-w-2/3">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               auctor, ex id laoreet rhoncus, nisi urna accumsan ipsum, in

@@ -1,6 +1,6 @@
 export default function SignUp() {
   return (
-    <div className="text-lg leading-none text-center mix-blend-plus-lighter">
+    <div className="text-lg leading-none text-center">
       <label htmlFor="signup-email">
         <p>Showroom sign up</p>
       </label>
