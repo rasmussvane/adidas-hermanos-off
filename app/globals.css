@@ -55,7 +55,7 @@
   }
 
   .image-blur::after {
-    --blur: 10px;
+    --blur: 5px;
     content: "";
     position: absolute;
     inset: calc(-1 * var(--blur) * 4);
