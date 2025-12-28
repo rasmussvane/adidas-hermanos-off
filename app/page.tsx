@@ -16,7 +16,7 @@ export default async function Home() {
             "Showroom",
             "27.01.26",
           ].map((text, index) => (
-            <p key={index} className="blur-mask">
+            <p key={index} className="text-blur">
               {text}
             </p>
           ))}

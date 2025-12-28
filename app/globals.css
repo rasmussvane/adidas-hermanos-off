@@ -32,11 +32,11 @@
     @apply mt-[1em];
   }
 
-  .blur-mask {
+  .text-blur {
     @apply relative;
   }
 
-  .blur-mask::after {
+  .text-blur::after {
     --blur: 4px;
     content: "";
     position: absolute;
