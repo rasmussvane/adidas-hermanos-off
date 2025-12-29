@@ -3,6 +3,14 @@ import FixedLayout from "./components/FixedLayout";
 import Image from "next/image";
 import SectionLayout from "./components/SectionLayout";
 
+const IMAGES = [
+  "/hermanoskoumori_1.jpg",
+  "/hermanoskoumori_2.jpg",
+  "/hermanoskoumori_3.jpg",
+  "/hermanoskoumori_4.jpg",
+  "/hermanoskoumori_5.jpg",
+];
+
 export default async function Home() {
   return (
     <>
@@ -22,16 +30,17 @@ export default async function Home() {
           ))}
         </SectionLayout>
         <SectionLayout className="gap-4">
-          {Array.from({ length: 3 }).map((_, index) => (
+          {IMAGES.map((src, index) => (
             <figure
               key={index}
               className="relative w-full max-w-sm aspect-image image-blur"
             >
               <Image
-                src="https://lipsum.app/random/1600x900"
+                src={src}
                 fill
                 alt=""
                 sizes="(width < 24rem) 100vw, 24rem"
+                loading="eager"
               />
             </figure>
           ))}
