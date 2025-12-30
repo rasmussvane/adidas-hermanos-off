@@ -4,19 +4,21 @@ import Image from "next/image";
 import SectionLayout from "./components/SectionLayout";
 import images from "./components/constants/images";
 
+const LINES = [
+  "Adidas",
+  "Hermanos",
+  "Koumori",
+  "Copenhagen",
+  "Showroom",
+  "27.01.26",
+];
+
 export default async function Home() {
   return (
     <>
       <main className="overflow-y-scroll h-screen">
         <SectionLayout className="text-7xl text-center font-seven-segments leading-[0.9] mix-blend-plus-lighter">
-          {[
-            "Adidas",
-            "Hermanos",
-            "Koumori",
-            "Copenhagen",
-            "Showroom",
-            "27.01.26",
-          ].map((text, index) => (
+          {LINES.map((text, index) => (
             <p key={index} className="text-blur">
               {text}
             </p>
