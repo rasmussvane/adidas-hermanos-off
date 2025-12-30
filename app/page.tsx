@@ -2,14 +2,7 @@ import BackgroundTexture from "./components/BackgroundTexture";
 import FixedLayout from "./components/FixedLayout";
 import Image from "next/image";
 import SectionLayout from "./components/SectionLayout";
-
-const IMAGES = [
-  "/hermanoskoumori_1.jpg",
-  "/hermanoskoumori_2.jpg",
-  "/hermanoskoumori_3.jpg",
-  "/hermanoskoumori_4.jpg",
-  "/hermanoskoumori_5.jpg",
-];
+import images from "./components/constants/images";
 
 export default async function Home() {
   return (
@@ -30,7 +23,7 @@ export default async function Home() {
           ))}
         </SectionLayout>
         <SectionLayout className="gap-4">
-          {IMAGES.map((src, index) => (
+          {images.map((src, index) => (
             <figure
               key={index}
               className="relative w-full max-w-sm aspect-image image-blur"
