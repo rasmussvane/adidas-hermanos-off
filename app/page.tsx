@@ -34,7 +34,7 @@ export default async function Home() {
                 src={src}
                 fill
                 alt=""
-                sizes="(width < 24rem) 100vw, 24rem"
+                sizes="(max-width: 24rem) 100vw, 24rem"
                 loading="eager"
               />
             </figure>
