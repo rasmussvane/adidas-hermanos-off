@@ -3,13 +3,11 @@ export default async function registerSignup({
 }: {
   email: string;
 }): Promise<boolean> {
+  const url = `https://script.google.com/macros/s/AKfycbxeA3yphq2WC2yEkYbsMMBt9NkI8d-tviQgMA_YBrqH2TCrUcliDICRmJ-A2WUSxzJk/exec?email=${email}`;
   try {
-    const response = await fetch(
-      `https://script.google.com/macros/s/AKfycbxeA3yphq2WC2yEkYbsMMBt9NkI8d-tviQgMA_YBrqH2TCrUcliDICRmJ-A2WUSxzJk/exec?email=${email}`,
-      {
-        method: "POST",
-      },
-    );
+    const response = await fetch(url, {
+      method: "POST",
+    });
 
     if (!response.ok) {
       console.error(`Signup failed: ${response.status} ${response.statusText}`);
