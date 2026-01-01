@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import registerSignup from "../utils/registerSignup";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 
 export default function SignUp() {
   const { handleSubmit, register } = useForm();
@@ -63,7 +62,7 @@ export default function SignUp() {
           className="border-b border-dashed border-b-foreground"
           {...register("email", { required: true })}
         />
-        <input type="submit" className="hidden" />
+        <input type="submit" className="absolute invisible" />
       </form>
     </div>
   );
