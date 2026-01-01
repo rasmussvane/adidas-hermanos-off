@@ -1,21 +1,58 @@
+import { useEffect, useState } from "react";
 import registerSignup from "../utils/registerSignup";
+import { useForm } from "react-hook-form";
 
 export default function SignUp() {
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const form = e.target as HTMLFormElement;
-    const emailInput = form.querySelector("#signup-email") as HTMLInputElement;
-    const email = emailInput.value;
+  const [state, setState] = useState<"idle" | "loading" | "success" | "error">(
+    "idle",
+  );
+  const { handleSubmit, register } = useForm();
 
-    console.log("Submitting email:", email);
+  useEffect(() => {
+    if (state === "error") {
+      const timer = setTimeout(() => {
+        setState("idle");
+      }, 3000);
+      return () => clearTimeout(timer);
+    }
+  }, [state]);
+
+  const onSubmit = handleSubmit(async (data) => {
+    setState("loading");
+    const email = data["email"];
 
     const response = await registerSignup({ email });
-    console.log(response, email);
-  };
+
+    if (response) {
+      setState("success");
+    } else {
+      setState("error");
+    }
+  });
+
+  if (state === "loading") {
+    return <div className="text-lg leading-none text-center">Loading...</div>;
+  }
+
+  if (state === "success") {
+    return (
+      <div className="text-lg leading-none text-center">
+        Thank you for signing up!
+      </div>
+    );
+  }
+
+  if (state === "error") {
+    return (
+      <div className="text-lg leading-none text-center">
+        An error occurred. Please try again.
+      </div>
+    );
+  }
 
   return (
     <div className="text-lg leading-none text-center">
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={onSubmit}>
         <label htmlFor="signup-email">
           <p>Showroom sign up</p>
         </label>
@@ -23,7 +60,9 @@ export default function SignUp() {
           id="signup-email"
           type="email"
           className="border-b border-dashed border-b-foreground"
+          {...register("email", { required: true })}
         />
+        <input type="submit" className="hidden" />
       </form>
     </div>
   );
