@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import registerSignup from "../utils/registerSignup";
 import { useForm } from "react-hook-form";
+import LoadingDots from "./LoadingDots";
 
 export default function SignUp() {
   const { handleSubmit, register } = useForm();
@@ -31,7 +32,11 @@ export default function SignUp() {
   });
 
   if (state === "loading") {
-    return <div className="text-lg leading-none text-center">Loading...</div>;
+    return (
+      <div className="text-lg leading-none text-center">
+        Loading <LoadingDots />
+      </div>
+    );
   }
 
   if (state === "success") {
