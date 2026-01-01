@@ -25,15 +25,11 @@ export default function BackgroundTexture() {
         repeatDelay: duration,
       });
     },
-    { scope: ref }
+    { scope: ref },
   );
 
   return (
     <div className="fixed inset-0 -z-10 pointer-events-none">
-      <div
-        className="absolute inset-0 bg-blend-multiply"
-        style={{ filter: "url(#grain)" }}
-      />
       <div ref={ref}>
         {Array.from({ length: 5 }).map((_, index) => {
           const gradient = `sun-${index + 1}`;
@@ -43,7 +39,7 @@ export default function BackgroundTexture() {
               className={classNames(
                 "absolute inset-0",
                 gradient,
-                animationClass
+                animationClass,
               )}
             />
           );

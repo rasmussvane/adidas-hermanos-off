@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import registerSignup from "../utils/registerSignup";
 import { useForm } from "react-hook-form";
+import { z } from "zod";
 
 export default function SignUp() {
+  const { handleSubmit, register } = useForm();
   const [state, setState] = useState<"idle" | "loading" | "success" | "error">(
     "idle",
   );
-  const { handleSubmit, register } = useForm();
 
   useEffect(() => {
     if (state === "error") {
