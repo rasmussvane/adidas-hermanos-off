@@ -1,17 +1,19 @@
 "use client";
+
 import { useWindowSize } from "@uidotdev/usehooks";
 import SunTimer from "./SunTimer";
 import Image from "next/image";
 import SignUp from "./SignUp";
 
-const mobileBreakPoints = 512; // Tailwind: Lg
+const mobileBreakPoints = 512; // Tailwind: lg-size
 
 export default function FixedLayout() {
   const { width } = useWindowSize();
+  const layout = width && width <= mobileBreakPoints ? "mobile" : "desktop";
 
   if (!width) return null;
 
-  if (width < mobileBreakPoints) {
+  if (layout === "mobile") {
     return (
       <>
         <header className="flex absolute top-0 left-0 justify-between p-4 w-full font-seven-segments mix-blend-plus-lighter">
@@ -54,10 +56,10 @@ export default function FixedLayout() {
           />
         </figure>
       </header>
-      <div className="flex absolute top-0 bottom-0 left-0 items-center p-4 font-seven-segments mix-blend-plus-lighter pointer-events-none">
+      <div className="flex absolute top-0 bottom-0 left-0 items-center p-4 pointer-events-none font-seven-segments mix-blend-plus-lighter">
         <SunTimer location="cdmx" />
       </div>
-      <div className="flex absolute top-0 right-0 bottom-0 items-center p-4 font-seven-segments mix-blend-plus-lighter pointer-events-none">
+      <div className="flex absolute top-0 right-0 bottom-0 items-center p-4 pointer-events-none font-seven-segments mix-blend-plus-lighter">
         <SunTimer location="cph" />
       </div>
       <footer className="flex absolute bottom-0 left-0 justify-center items-end p-4 w-full font-seven-segments mix-blend-plus-lighter">

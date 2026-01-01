@@ -59,6 +59,7 @@ export default function SignUp() {
         <input
           id="signup-email"
           type="email"
+          enterKeyHint="send"
           className="border-b border-dashed border-b-foreground"
           {...register("email", { required: true })}
         />
