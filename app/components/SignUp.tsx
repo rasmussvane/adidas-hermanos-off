@@ -68,7 +68,6 @@ export default function SignUp() {
           className="border-b border-dashed border-b-foreground"
           {...register("email", { required: true })}
         />
-        <input type="submit" className="absolute invisible" />
       </form>
     </div>
   );
