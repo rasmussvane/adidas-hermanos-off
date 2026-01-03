@@ -16,15 +16,15 @@ const LINES = [
 export default function Home() {
   return (
     <>
-      <main className="overflow-y-scroll h-screen">
-        <SectionLayout className="text-7xl text-center font-seven-segments leading-[0.9] mix-blend-plus-lighter">
+      <main className="overflow-y-scroll h-screen snap-y-mandatory">
+        <SectionLayout className="text-7xl text-center font-seven-segments leading-[0.9] mix-blend-plus-lighter snap-center">
           {LINES.map((text, index) => (
             <p key={index} className="text-blur">
               {text}
             </p>
           ))}
         </SectionLayout>
-        <SectionLayout className="gap-4">
+        <SectionLayout className="gap-4 snap-start">
           {images.map((src, index) => (
             <figure
               key={index}
@@ -40,7 +40,7 @@ export default function Home() {
             </figure>
           ))}
         </SectionLayout>
-        <SectionLayout className="mix-blend-plus-lighter">
+        <SectionLayout className="mix-blend-plus-lighter snap-center">
           <div className="max-w-none font-sans text-center rich-text text-base/6 md:max-w-2/3">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
