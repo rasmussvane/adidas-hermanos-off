@@ -8,12 +8,12 @@ type Props = {
 };
 
 export default function SunTimer({ location }: Props) {
-  const { localTime, sunData, isLoading, error } = useSunTimer(location);
+  const { localTime, sunData, isLoading, isError } = useSunTimer(location);
   const warpperClass = "text-lg leading-none text-center";
 
   if (isLoading) return null;
 
-  if (error) {
+  if (isError) {
     return (
       <div className={warpperClass}>
         <p>{`${location} ${localTime}`}</p>

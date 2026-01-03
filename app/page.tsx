@@ -13,7 +13,7 @@ const LINES = [
   "27.01.26",
 ];
 
-export default async function Home() {
+export default function Home() {
   return (
     <>
       <main className="overflow-y-scroll h-screen">
