@@ -1,4 +1,5 @@
 "use client";
+import { useMemo } from "react";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 
 type Props = {
@@ -6,7 +7,7 @@ type Props = {
 };
 
 export default function ClientQueryClientProvider({ children }: Props) {
-  const queryClient = new QueryClient();
+  const queryClient = useMemo(() => new QueryClient(), []);
   return (
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
