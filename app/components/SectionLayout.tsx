@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+
 type Props = {
   children: React.ReactNode;
   className?: string;
@@ -6,7 +8,7 @@ type Props = {
 export default function SectionLayout({ children, className = "" }: Props) {
   return (
     <div
-      className={` flex flex-col justify-center items-center min-h-screen w-full p-4 overflow-hidden ${className}`}
+      className={classNames('flex flex-col justify-center items-center min-h-screen w-full p-4 overflow-hidden', className)}
     >
       {children}
     </div>
