@@ -68,6 +68,9 @@ export default function SignUp() {
           className="border-b border-dashed border-b-foreground"
           {...register("email", { required: true })}
         />
+        <button type="submit" className="sr-only">
+          Submit
+        </button>
       </form>
     </div>
   );
