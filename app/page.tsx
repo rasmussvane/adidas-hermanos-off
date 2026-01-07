@@ -17,13 +17,13 @@ export default function Home() {
           {images.map((src, index) => (
             <figure
               key={index}
-              className="relative w-full max-w-sm aspect-image"
+              className="relative w-full max-w-[25rem] aspect-image"
             >
               <Image
                 src={src}
                 fill
                 alt=""
-                sizes="(max-width: 24rem) 100vw, 24rem"
+                sizes="(max-width: 25rem) 100vw, 25rem"
                 loading="eager"
               />
             </figure>
