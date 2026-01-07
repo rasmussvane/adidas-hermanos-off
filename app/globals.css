@@ -5,6 +5,11 @@
   src: url("/seven-segment.ttf");
 }
 
+@font-face {
+  font-family: "Helvetica Neue";
+  src: url("/Helvetica Neue LT Pro 65 Medium.woff2");
+}
+
 :root {
   --background: #000000;
   --foreground: #ff4a02;
@@ -17,7 +22,7 @@
 
 @theme {
   --font-seven-segments: "Seven Segments", monospace;
-  --font-sans: Helvetica, Arial, sans-serif;
+  --font-sans: Helvetica Neue, Arial, sans-serif;
   --aspect-image: 3 / 4;
 }
 
