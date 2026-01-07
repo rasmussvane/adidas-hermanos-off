@@ -7,13 +7,13 @@ import images from "./components/constants/images";
 export default function Home() {
   return (
     <>
-      <main className="snap-y-mandatory">
-        <SectionLayout className="mix-blend-plus-lighter snap-center">
+      <main>
+        <SectionLayout className="mix-blend-plus-lighter">
           <figure className="relative" style={{width: 400, height: 400}}>
             <Image src="/text-lockup.webp" className="w-full h-full object-contain" fill alt="Adidas X Hermanos Koumori. Copenhagen showroom. 27. 01. 2026" />
           </figure>
         </SectionLayout>
-        <SectionLayout className="gap-base snap-start">
+        <SectionLayout className="gap-base">
           {images.map((src, index) => (
             <figure
               key={index}
@@ -29,7 +29,7 @@ export default function Home() {
             </figure>
           ))}
         </SectionLayout>
-        <SectionLayout className="mix-blend-plus-lighter snap-center">
+        <SectionLayout className="mix-blend-plus-lighter">
           <div className="max-w-none font-sans text-center rich-text text-base/5 md:max-w-2/3">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec

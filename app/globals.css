@@ -30,7 +30,7 @@
 
 @layer base {
   html {
-    @apply h-full overflow-y-scroll snap-y snap-mandatory;
+    @apply h-full overflow-y-scroll;
   }
   body {
     @apply bg-background text-foreground min-h-full;
