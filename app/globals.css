@@ -37,42 +37,6 @@
     @apply mt-[1em];
   }
 
-  .text-blur {
-    @apply relative;
-  }
-
-  .text-blur::after {
-    --blur: 4px;
-    content: "";
-    position: absolute;
-    inset: calc(-1 * var(--blur));
-    backdrop-filter: blur(var(--blur));
-    mask-image: linear-gradient(
-      to bottom,
-      transparent 0%,
-      transparent 30%,
-      black 80%
-    );
-  }
-
-  .image-blur {
-    @apply relative;
-  }
-
-  .image-blur::after {
-    --blur: 5px;
-    content: "";
-    position: absolute;
-    inset: calc(-1 * var(--blur) * 4);
-    backdrop-filter: blur(var(--blur));
-    mask-image: linear-gradient(
-      to bottom,
-      transparent 0%,
-      transparent 30%,
-      black 80%
-    );
-  }
-
   .sun-1 {
     background: linear-gradient(
       180deg,
