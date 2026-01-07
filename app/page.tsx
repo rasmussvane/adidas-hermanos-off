@@ -13,7 +13,7 @@ export default function Home() {
             <Image src="/text-lockup.webp" className="w-full h-full object-contain" fill alt="Adidas X Hermanos Koumori. Copenhagen showroom. 27. 01. 2026" />
           </figure>
         </SectionLayout>
-        <SectionLayout className="gap-4 snap-start">
+        <SectionLayout className="gap-base snap-start">
           {images.map((src, index) => (
             <figure
               key={index}

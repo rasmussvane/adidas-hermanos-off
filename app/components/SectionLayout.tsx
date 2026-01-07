@@ -8,7 +8,7 @@ type Props = {
 export default function SectionLayout({ children, className = "" }: Props) {
   return (
     <div
-      className={classNames('flex flex-col justify-center items-center min-h-screen w-full p-4 overflow-hidden', className)}
+      className={classNames('flex flex-col justify-center items-center min-h-screen w-full p-sm md:p-base overflow-hidden', className)}
     >
       {children}
     </div>
