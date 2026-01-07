@@ -1,9 +1,10 @@
 const images = [
-  "/hermanoskoumori_1.jpg",
-  "/hermanoskoumori_2.jpg",
-  "/hermanoskoumori_3.jpg",
-  "/hermanoskoumori_4.jpg",
-  "/hermanoskoumori_5.jpg",
+
+"/hermanoskoumori_1750172830_3657037222973583231_6118973940.webp",
+        "/hermanoskoumori_1750172830_3657037222982124014_6118973940.webp",
+        "/hermanoskoumori_1750172830_3657037222982157040_6118973940.webp",
+        "/hermanoskoumori_1750172830_3657037223116266997_6118973940.webp",
+        "/hermanoskoumori_1750172830_3657037223242081207_6118973940.webp"
 ];
 
 export default images;

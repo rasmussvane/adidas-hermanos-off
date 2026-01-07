@@ -28,7 +28,7 @@ export default function Home() {
           {images.map((src, index) => (
             <figure
               key={index}
-              className="relative w-full max-w-sm aspect-image image-blur"
+              className="relative w-full max-w-sm aspect-image"
             >
               <Image
                 src={src}
