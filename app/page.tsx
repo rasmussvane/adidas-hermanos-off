@@ -4,25 +4,14 @@ import Image from "next/image";
 import SectionLayout from "./components/SectionLayout";
 import images from "./components/constants/images";
 
-const LINES = [
-  "Adidas",
-  "Hermanos",
-  "Koumori",
-  "Copenhagen",
-  "Showroom",
-  "27.01.26",
-];
-
 export default function Home() {
   return (
     <>
       <main className="overflow-y-scroll h-screen snap-y-mandatory">
-        <SectionLayout className="text-7xl text-center font-seven-segments leading-[0.9] mix-blend-plus-lighter snap-center">
-          {LINES.map((text, index) => (
-            <p key={index} className="text-blur">
-              {text}
-            </p>
-          ))}
+        <SectionLayout className="mix-blend-plus-lighter snap-center">
+          <figure className="relative" style={{width: 400, height: 400}}>
+            <Image src="/text-lockup.webp" className="w-full h-full object-contain" fill alt="Adidas X Hermanos Koumori. Copenhagen showroom. 27. 01. 2026" />
+          </figure>
         </SectionLayout>
         <SectionLayout className="gap-4 snap-start">
           {images.map((src, index) => (
