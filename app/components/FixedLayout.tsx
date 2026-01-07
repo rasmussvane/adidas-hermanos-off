@@ -23,11 +23,11 @@ export default function FixedLayout() {
   if (layout === "mobile") {
     return (
       <>
-        <header className="flex absolute top-0 left-0 justify-between p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
+        <header className="flex fixed top-0 left-0 justify-between p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
           <SunTimer location="cdmx" />
           <SunTimer location="cph" />
         </header>
-        <footer className="flex absolute bottom-0 left-0 justify-between items-end p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
+        <footer className="flex fixed bottom-0 left-0 justify-between items-end p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
           <figure style={{ ...logoSize.mobile }} className="relative">
             <Image
               src="/logo.svg"
@@ -53,7 +53,7 @@ export default function FixedLayout() {
 
   return (
     <>
-      <header className="flex absolute top-0 left-0 justify-center p-sm md:p-base w-full mix-blend-plus-lighter">
+      <header className="flex fixed top-0 left-0 justify-center p-sm md:p-base w-full mix-blend-plus-lighter">
         <figure style={{ ...logoSize.desktop }} className="relative">
           <Image
             src="/logo.svg"
@@ -63,13 +63,13 @@ export default function FixedLayout() {
           />
         </figure>
       </header>
-      <div className="flex absolute top-0 bottom-0 left-0 items-center p-sm md:p-base pointer-events-none font-seven-segments mix-blend-plus-lighter">
+      <div className="flex fixed top-0 bottom-0 left-0 items-center p-sm md:p-base pointer-events-none font-seven-segments mix-blend-plus-lighter">
         <SunTimer location="cdmx" />
       </div>
-      <div className="flex absolute top-0 right-0 bottom-0 items-center p-sm md:p-base pointer-events-none font-seven-segments mix-blend-plus-lighter">
+      <div className="flex fixed top-0 right-0 bottom-0 items-center p-sm md:p-base pointer-events-none font-seven-segments mix-blend-plus-lighter">
         <SunTimer location="cph" />
       </div>
-      <footer className="flex absolute bottom-0 left-0 justify-center items-end p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
+      <footer className="flex fixed bottom-0 left-0 justify-center items-end p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
         <div className="text-lg leading-none text-center">
           <SignUp />
         </div>
