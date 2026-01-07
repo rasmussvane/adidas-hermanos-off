@@ -7,7 +7,7 @@ import images from "./components/constants/images";
 export default function Home() {
   return (
     <>
-      <main className="overflow-y-scroll h-screen snap-y-mandatory">
+      <main className="snap-y-mandatory">
         <SectionLayout className="mix-blend-plus-lighter snap-center">
           <figure className="relative" style={{width: 400, height: 400}}>
             <Image src="/text-lockup.webp" className="w-full h-full object-contain" fill alt="Adidas X Hermanos Koumori. Copenhagen showroom. 27. 01. 2026" />

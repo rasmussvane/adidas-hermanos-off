@@ -29,8 +29,11 @@
 }
 
 @layer base {
+  html {
+    @apply h-full overflow-y-scroll snap-y snap-mandatory;
+  }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground min-h-full;
   }
 }
 
