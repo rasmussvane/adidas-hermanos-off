@@ -30,7 +30,7 @@ export default function Home() {
           ))}
         </SectionLayout>
         <SectionLayout className="mix-blend-plus-lighter snap-center">
-          <div className="max-w-none font-sans text-center rich-text text-base/6 md:max-w-2/3">
+          <div className="max-w-none font-sans text-center rich-text text-base/5 md:max-w-2/3">
             <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               auctor, ex id laoreet rhoncus, nisi urna accumsan ipsum, in
