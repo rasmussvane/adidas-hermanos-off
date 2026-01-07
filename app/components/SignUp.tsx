@@ -57,7 +57,7 @@ export default function SignUp() {
 
   return (
     <div className="text-lg leading-none text-center">
-      <form onSubmit={onSubmit}>
+      <form onSubmit={onSubmit} action="#">
         <label htmlFor="signup-email">
           <p>Showroom sign up</p>
         </label>
