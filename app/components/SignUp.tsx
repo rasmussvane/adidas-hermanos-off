@@ -66,12 +66,6 @@ export default function SignUp() {
           type="email"
           enterKeyHint="send"
           className="border-b border-dashed border-b-foreground"
-          onKeyDown={(e) => {
-            if (e.key === "Enter") {
-              e.preventDefault();
-              onSubmit();
-            }
-          }}
           {...register("email", { required: true })}
         />
         <button type="submit" className="sr-only">
