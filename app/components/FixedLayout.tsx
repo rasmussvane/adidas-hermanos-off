@@ -7,10 +7,16 @@ import SignUp from "./SignUp";
 
 const mobileBreakPoints = 512; // Tailwind: lg-size
 
+const logoWidth = {mobile: 137, desktop: 150}; 
+const logoRatio = 58/137;
+const logoSize = {
+  mobile: {width: logoWidth.mobile, height: logoWidth.mobile*logoRatio}, 
+  desktop: {width: logoWidth.desktop, height: logoWidth.desktop*logoRatio},
+}
+
 export default function FixedLayout() {
   const { width } = useWindowSize();
   const layout = width && width <= mobileBreakPoints ? "mobile" : "desktop";
-
 
   if (!width) return null;
 
@@ -22,7 +28,7 @@ export default function FixedLayout() {
           <SunTimer location="cph" />
         </header>
         <footer className="flex absolute bottom-0 left-0 justify-between items-end p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
-          <figure style={{ width: 137, height: 58 }} className="relative">
+          <figure style={{ ...logoSize.mobile }} className="relative">
             <Image
               src="/logo.svg"
               alt=""
@@ -48,7 +54,7 @@ export default function FixedLayout() {
   return (
     <>
       <header className="flex absolute top-0 left-0 justify-center p-sm md:p-base w-full mix-blend-plus-lighter">
-        <figure style={{ width: 137, height: 58 }} className="relative">
+        <figure style={{ ...logoSize.desktop }} className="relative">
           <Image
             src="/logo.svg"
             alt=""
