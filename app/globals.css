@@ -24,6 +24,8 @@
   --font-seven-segments: "Seven Segments", monospace;
   --font-sans: Helvetica Neue, Arial, sans-serif;
   --aspect-image: 3 / 4;
+  --spacing-sm: 0.35rem;
+  --spacing-base: 0.45rem;
 }
 
 @layer base {
