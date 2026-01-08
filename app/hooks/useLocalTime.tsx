@@ -2,7 +2,7 @@ import moment from "moment-timezone";
 import { useState, useEffect } from "react";
 import { Location } from "../utils/fetchSun";
 
-const UPDATE_INTERVAL = 60000; // 1 minute
+const UPDATE_INTERVAL = 1000; // 1 second
 const TIME_ZONES = {
   cdmx: "America/Mexico_City",
   cph: "Europe/Copenhagen",
@@ -13,7 +13,7 @@ export default function useLocalTime(location: Location): string {
 
   useEffect(() => {
     const updateTime = (): void => {
-      const time = moment().tz(TIME_ZONES[location]).format("HH:mm");
+      const time = moment().tz(TIME_ZONES[location]).format("HH:mm:ss");
       setLocalTime(time);
     };
 
