@@ -1,13 +1,13 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @font-face {
-  font-family: "Seven Segments";
-  src: url("/seven-segment.ttf");
+  font-family: 'Seven Segments';
+  src: url('/seven-segment.ttf');
 }
 
 @font-face {
-  font-family: "Helvetica Neue";
-  src: url("/Helvetica Neue LT Pro 65 Medium.woff2");
+  font-family: 'Helvetica Neue';
+  src: url('/Helvetica Neue LT Pro 65 Medium.woff2');
 }
 
 :root {
@@ -21,11 +21,11 @@
 }
 
 @theme {
-  --font-seven-segments: "Seven Segments", monospace;
+  --font-seven-segments: 'Seven Segments', monospace;
   --font-sans: Helvetica Neue, Arial, sans-serif;
   --aspect-image: 3 / 4;
-  --spacing-sm: 0.35rem;
-  --spacing-base: 0.45rem;
+  --spacing-sm: 1.35rem;
+  --spacing-base: 1.45rem;
 }
 
 @layer base {
