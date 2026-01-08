@@ -9,11 +9,14 @@ export default function Home() {
     <>
       <main>
         <SectionLayout className="mix-blend-plus-lighter">
-          <figure className="relative" style={{ width: 400, height: 400 }}>
+          <figure
+            className="relative w-full h-screen"
+            style={{ maxWidth: 500 }}
+          >
             <Image
               src="/text-lockup.webp"
               loading="eager"
-              className="w-full h-full object-contain"
+              className="w-full h-full object-contain pointer-event-none"
               fill
               alt="Adidas X Hermanos Koumori. Copenhagen showroom. 27. 01. 2026"
             />
