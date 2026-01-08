@@ -1,16 +1,22 @@
-import BackgroundTexture from "./components/BackgroundTexture";
-import FixedLayout from "./components/FixedLayout";
-import Image from "next/image";
-import SectionLayout from "./components/SectionLayout";
-import images from "./components/constants/images";
+import BackgroundTexture from './components/BackgroundTexture';
+import FixedLayout from './components/FixedLayout';
+import Image from 'next/image';
+import SectionLayout from './components/SectionLayout';
+import images from './components/constants/images';
 
 export default function Home() {
   return (
     <>
       <main>
         <SectionLayout className="mix-blend-plus-lighter">
-          <figure className="relative" style={{width: 400, height: 400}}>
-            <Image src="/text-lockup.webp" className="w-full h-full object-contain" fill alt="Adidas X Hermanos Koumori. Copenhagen showroom. 27. 01. 2026" />
+          <figure className="relative" style={{ width: 400, height: 400 }}>
+            <Image
+              src="/text-lockup.webp"
+              loading="eager"
+              className="w-full h-full object-contain"
+              fill
+              alt="Adidas X Hermanos Koumori. Copenhagen showroom. 27. 01. 2026"
+            />
           </figure>
         </SectionLayout>
         <SectionLayout className="gap-base">
