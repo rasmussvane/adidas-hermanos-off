@@ -10,7 +10,7 @@ export default function Home() {
       <main>
         <SectionLayout className="mix-blend-plus-lighter">
           <figure
-            className="relative w-full h-[100dvh]"
+            className="relative w-full h-[100svh]"
             style={{ maxWidth: 500 }}
           >
             <Image
