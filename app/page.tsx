@@ -1,18 +1,15 @@
-import BackgroundTexture from './components/BackgroundTexture';
-import FixedLayout from './components/FixedLayout';
-import Image from 'next/image';
-import SectionLayout from './components/SectionLayout';
-import images from './components/constants/images';
+import BackgroundTexture from "./components/BackgroundTexture";
+import FixedLayout from "./components/FixedLayout";
+import Image from "next/image";
+import SectionLayout from "./components/SectionLayout";
+import images from "./components/constants/images";
 
 export default function Home() {
   return (
     <>
       <main>
         <SectionLayout className="mix-blend-plus-lighter">
-          <figure
-            className="relative w-full h-[100svh]"
-            style={{ maxWidth: 500 }}
-          >
+          <figure className="relative w-full flex-1" style={{ maxWidth: 500 }}>
             <Image
               src="/text-lockup.webp"
               loading="eager"
@@ -26,7 +23,7 @@ export default function Home() {
           {images.map((src, index) => (
             <figure
               key={index}
-              className="relative w-full max-w-[25rem] aspect-image"
+              className="relative w-full max-w-100 aspect-image"
             >
               <Image
                 src={src}
