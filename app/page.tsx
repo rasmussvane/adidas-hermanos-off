@@ -56,7 +56,7 @@ export default function Home() {
             <p>H.Koumori x Adidas</p>
           </div>
         </SectionLayout>
-        <SectionLayout className="mix-blend-plus-lighter gap-sm">
+        <SectionLayout className="mix-blend-plus-lighter gap-sm font-seven-segments">
           <SubEventSignUp label="Showroom sign up" sheet="test-event-1" />
           <SubEventSignUp label="Another event" sheet="test-event-2" />
         </SectionLayout>

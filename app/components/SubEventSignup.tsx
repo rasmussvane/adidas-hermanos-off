@@ -63,7 +63,7 @@ export default function SubEventSignUp({ label, sheet }: Props) {
   }
 
   return (
-    <div className="text-lg leading-none text-center font-seven-segments">
+    <div className="text-lg leading-none text-center">
       <form onSubmit={onSubmit} action="#">
         <div className="flex gap-2">
           <label htmlFor={sheet}>
