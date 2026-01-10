@@ -5,7 +5,7 @@ import SunTimer from "./SunTimer";
 import Image from "next/image";
 import MainEventSignUp from "./MainEventSignUp";
 
-const mobileBreakPoints = 512; // Tailwind: lg-size
+const mobileBreakpoint = 512;
 
 const logoWidth = { mobile: 137, desktop: 150 };
 const logoRatio = 58 / 137;
@@ -16,7 +16,7 @@ const logoSize = {
 
 export default function FixedLayout() {
   const { width } = useWindowSize();
-  const layout = width && width <= mobileBreakPoints ? "mobile" : "desktop";
+  const layout = width && width <= mobileBreakpoint ? "mobile" : "desktop";
 
   if (!width) return null;
 
