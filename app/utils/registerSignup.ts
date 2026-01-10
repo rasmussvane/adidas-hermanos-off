@@ -7,7 +7,7 @@ export default async function registerSignup({
   sheet: string;
   email: string;
 }): Promise<boolean> {
-  const url = `${baseUrl}?sheet=${sheet}&email=${email}`;
+  const url = `${baseUrl}?sheet=${encodeURIComponent(sheet)}&email=${encodeURIComponent(email)}`;
   try {
     const response = await fetch(url, {
       method: "POST",
