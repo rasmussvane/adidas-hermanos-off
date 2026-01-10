@@ -31,7 +31,7 @@ export default function FixedLayout() {
           <figure style={{ ...logoSize.mobile }} className="relative">
             <Image
               src="/logo.svg"
-              alt=""
+              alt="Hermanos Koumori"
               fill
               className="object-contain object-bottom"
             />
@@ -48,7 +48,7 @@ export default function FixedLayout() {
         <figure style={{ ...logoSize.desktop }} className="relative">
           <Image
             src="/logo.svg"
-            alt=""
+            alt="Hermanos Koumori"
             fill
             className="object-contain object-bottom"
           />
