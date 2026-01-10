@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import registerSignup from "../utils/registerSignup";
 import { useForm } from "react-hook-form";
