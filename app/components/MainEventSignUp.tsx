@@ -41,18 +41,12 @@ export default function MainEventSignUp() {
 
   if (state === "success") {
     return (
-      <div className="text-lg leading-none text-center">
-        Thank you for signing up!
-      </div>
+      <div className="text-lg leading-none text-center">Sign up registered</div>
     );
   }
 
   if (state === "error") {
-    return (
-      <div className="text-lg leading-none text-center">
-        An error occurred. Please try again.
-      </div>
-    );
+    return <div className="text-lg leading-none text-center">Error</div>;
   }
 
   return (

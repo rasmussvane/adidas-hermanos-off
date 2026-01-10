@@ -36,16 +36,7 @@ export default function FixedLayout() {
               className="object-contain object-bottom"
             />
           </figure>
-          <div className="text-lg leading-none">
-            <label htmlFor="signup-email">
-              <p>Showroom sign up</p>
-            </label>
-            <input
-              id="signup-email"
-              type="email"
-              className="border-b border-dashed border-b-foreground"
-            />
-          </div>
+          <MainEventSignUp />
         </footer>
       </>
     );
