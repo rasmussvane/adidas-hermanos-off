@@ -3,16 +3,16 @@
 import { useWindowSize } from "@uidotdev/usehooks";
 import SunTimer from "./SunTimer";
 import Image from "next/image";
-import SignUp from "./SignUp";
+import MainEventSignUp from "./MainEventSignUp";
 
 const mobileBreakPoints = 512; // Tailwind: lg-size
 
-const logoWidth = {mobile: 137, desktop: 150}; 
-const logoRatio = 58/137;
+const logoWidth = { mobile: 137, desktop: 150 };
+const logoRatio = 58 / 137;
 const logoSize = {
-  mobile: {width: logoWidth.mobile, height: logoWidth.mobile*logoRatio}, 
-  desktop: {width: logoWidth.desktop, height: logoWidth.desktop*logoRatio},
-}
+  mobile: { width: logoWidth.mobile, height: logoWidth.mobile * logoRatio },
+  desktop: { width: logoWidth.desktop, height: logoWidth.desktop * logoRatio },
+};
 
 export default function FixedLayout() {
   const { width } = useWindowSize();
@@ -71,7 +71,7 @@ export default function FixedLayout() {
       </div>
       <footer className="flex fixed bottom-0 left-0 justify-center items-end p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
         <div className="text-lg leading-none text-center">
-          <SignUp />
+          <MainEventSignUp />
         </div>
       </footer>
     </>

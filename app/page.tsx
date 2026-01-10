@@ -3,6 +3,7 @@ import FixedLayout from "./components/FixedLayout";
 import Image from "next/image";
 import SectionLayout from "./components/SectionLayout";
 import images from "./components/constants/images";
+import SubEventSignUp from "./components/SubEventSignup";
 
 export default function Home() {
   return (
@@ -54,6 +55,10 @@ export default function Home() {
             </p>
             <p>H.Koumori x Adidas</p>
           </div>
+        </SectionLayout>
+        <SectionLayout className="mix-blend-plus-lighter gap-sm">
+          <SubEventSignUp label="Showroom sign up" sheet="test-event-1" />
+          <SubEventSignUp label="Another event" sheet="test-event-2" />
         </SectionLayout>
       </main>
       <FixedLayout />

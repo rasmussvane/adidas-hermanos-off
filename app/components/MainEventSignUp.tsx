@@ -3,7 +3,7 @@ import registerSignup from "../utils/registerSignup";
 import { useForm } from "react-hook-form";
 import LoadingDots from "./LoadingDots";
 
-export default function SignUp() {
+export default function MainEventSignUp() {
   const { handleSubmit, register } = useForm();
   const [state, setState] = useState<"idle" | "loading" | "success" | "error">(
     "idle"
