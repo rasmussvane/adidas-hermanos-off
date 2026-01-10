@@ -1,9 +1,13 @@
+const baseUrl =
+  "https://script.google.com/macros/s/AKfycbz62bul4JLs46BYXHRKe9IPfSNfjXRGr5K4XddswBeNt0hVm1jlZnqToeV7bK9febFE/exec";
 export default async function registerSignup({
+  sheet,
   email,
 }: {
+  sheet: string;
   email: string;
 }): Promise<boolean> {
-  const url = `https://script.google.com/macros/s/AKfycbxeA3yphq2WC2yEkYbsMMBt9NkI8d-tviQgMA_YBrqH2TCrUcliDICRmJ-A2WUSxzJk/exec?email=${email}`;
+  const url = `${baseUrl}?sheet=${sheet}&email=${email}`;
   try {
     const response = await fetch(url, {
       method: "POST",

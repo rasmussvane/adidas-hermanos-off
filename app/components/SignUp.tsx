@@ -6,7 +6,7 @@ import LoadingDots from "./LoadingDots";
 export default function SignUp() {
   const { handleSubmit, register } = useForm();
   const [state, setState] = useState<"idle" | "loading" | "success" | "error">(
-    "idle",
+    "idle"
   );
 
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function SignUp() {
     setState("loading");
     const email = data["email"];
 
-    const response = await registerSignup({ email });
+    const response = await registerSignup({ email, sheet: "main-event" });
 
     if (response) {
       setState("success");
