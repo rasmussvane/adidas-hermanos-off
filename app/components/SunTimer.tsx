@@ -9,20 +9,20 @@ type Props = {
 
 export default function SunTimer({ location }: Props) {
   const { localTime, sunData, isLoading, isError } = useSunTimer(location);
-  const warpperClass = "text-lg leading-none text-center";
+  const wrapperClass = "text-lg leading-none text-center";
 
   if (isLoading) return null;
 
   if (isError) {
     return (
-      <div className={warpperClass}>
+      <div className={wrapperClass}>
         <p>{`${location} ${localTime}`}</p>
       </div>
     );
   }
 
   return (
-    <div className={warpperClass}>
+    <div className={wrapperClass}>
       <p>{`${location} ${localTime}`}</p>
       <p>{`${sunData?.type} ${sunData?.countDown}`}</p>
     </div>
