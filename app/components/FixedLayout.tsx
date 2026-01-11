@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { useWindowSize } from "@uidotdev/usehooks";
-import SunTimer from "./SunTimer";
-import Image from "next/image";
-import MainEventSignUp from "./MainEventSignUp";
+import { useWindowSize } from '@uidotdev/usehooks';
+import SunTimer from './SunTimer';
+import Image from 'next/image';
+import MainEventSignUp from './MainEventSignUp';
 
 const mobileBreakpoint = 512;
 
-const logoWidth = { mobile: 137, desktop: 150 };
+const logoWidth = { mobile: 137, desktop: 150 * 1.4 };
 const logoRatio = 58 / 137;
 const logoSize = {
   mobile: { width: logoWidth.mobile, height: logoWidth.mobile * logoRatio },
@@ -16,11 +16,11 @@ const logoSize = {
 
 export default function FixedLayout() {
   const { width } = useWindowSize();
-  const layout = width && width <= mobileBreakpoint ? "mobile" : "desktop";
+  const layout = width && width <= mobileBreakpoint ? 'mobile' : 'desktop';
 
   if (!width) return null;
 
-  if (layout === "mobile") {
+  if (layout === 'mobile') {
     return (
       <>
         <header className="flex fixed top-0 left-0 justify-between p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
