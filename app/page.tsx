@@ -10,7 +10,10 @@ export default function Home() {
     <>
       <main>
         <SectionLayout className="mix-blend-plus-lighter">
-          <figure className="relative w-full flex-1" style={{ maxWidth: 500 }}>
+          <figure
+            className="relative w-full flex-1"
+            style={{ maxWidth: 500, minHeight: 300 }}
+          >
             <Image
               src="/text-lockup.webp"
               loading="eager"
