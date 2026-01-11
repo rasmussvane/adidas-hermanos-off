@@ -56,7 +56,7 @@ export default function Home() {
             <p>H.Koumori x Adidas</p>
           </div>
         </SectionLayout>
-        <SectionLayout className="mix-blend-plus-lighter gap-[40px] font-seven-segments">
+        <SectionLayout className="mix-blend-plus-lighter gap-10 font-seven-segments">
           <figure className="relative w-full" style={{ height: 60 }}>
             <Image
               src={'/sign-up.webp'}

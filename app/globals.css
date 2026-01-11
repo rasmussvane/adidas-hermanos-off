@@ -25,6 +25,7 @@
   --font-sans: Helvetica Neue, Arial, sans-serif;
   --aspect-image: 3 / 4;
   --spacing-sm: 1.35rem;
+  --spacing-text: 1em;
   --spacing-base: 1.45rem;
 }
 
@@ -39,7 +40,7 @@
 
 @layer components {
   .rich-text > * + * {
-    @apply mt-[1em];
+    @apply mt-text;
   }
 
   .sun-1 {

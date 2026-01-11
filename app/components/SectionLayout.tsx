@@ -9,7 +9,7 @@ export default function SectionLayout({ children, className = '' }: Props) {
   return (
     <div
       className={classNames(
-        'flex flex-col justify-center items-center min-h-dvh w-full p-sm md:p-base py-[40px]',
+        'flex flex-col justify-center items-center min-h-dvh w-full p-sm md:p-base py-10',
         className
       )}
     >
