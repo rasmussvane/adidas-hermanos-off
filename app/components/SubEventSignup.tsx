@@ -4,6 +4,7 @@ import { ReactNode, useEffect, useState } from 'react';
 import registerSignup from '../utils/registerSignup';
 import { useForm } from 'react-hook-form';
 import LoadingDots from './LoadingDots';
+import SevenSegmentUnderline from './SevenSegmentUnderline';
 
 type Props = {
   label: ReactNode;
@@ -65,15 +66,16 @@ export default function SubEventSignUp({ label, sheet }: Props) {
   return (
     <div className="text-lg leading-none text-center w-full">
       <form onSubmit={onSubmit} action="#">
-        <div className="flex flex-col justify-center items-center">
+        <div className="flex flex-col justify-center items-center relative">
           <label htmlFor={sheet}>{label}</label>
           <input
             id={sheet}
             type="email"
-            className="border-b-[1.5] border-dashed border-b-foreground w-full max-w-none md:max-w-[350px]"
+            className="w-50 text-center"
             {...register('email', { required: true })}
             enterKeyHint="send"
           />
+          <SevenSegmentUnderline />
         </div>
       </form>
     </div>
