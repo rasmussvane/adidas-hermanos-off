@@ -1,9 +1,9 @@
-import BackgroundTexture from "./components/BackgroundTexture";
-import FixedLayout from "./components/FixedLayout";
-import Image from "next/image";
-import SectionLayout from "./components/SectionLayout";
-import images from "./components/constants/images";
-import SubEventSignUp from "./components/SubEventSignup";
+import BackgroundTexture from './components/BackgroundTexture';
+import FixedLayout from './components/FixedLayout';
+import Image from 'next/image';
+import SectionLayout from './components/SectionLayout';
+import images from './components/constants/images';
+import SubEventSignUp from './components/SubEventSignup';
 
 export default function Home() {
   return (
@@ -14,7 +14,7 @@ export default function Home() {
             <Image
               src="/text-lockup.webp"
               loading="eager"
-              className="w-full h-full object-contain pointer-event-none"
+              className="w-full h-full object-contain"
               fill
               alt="Adidas X Hermanos Koumori. Copenhagen showroom. 27. 01. 2026"
             />
@@ -56,9 +56,80 @@ export default function Home() {
             <p>H.Koumori x Adidas</p>
           </div>
         </SectionLayout>
-        <SectionLayout className="mix-blend-plus-lighter gap-sm font-seven-segments">
-          <SubEventSignUp label="Showroom sign up" sheet="test-event-1" />
-          <SubEventSignUp label="Another event" sheet="test-event-2" />
+        <SectionLayout className="mix-blend-plus-lighter gap-[40px] font-seven-segments">
+          <figure className="relative w-full" style={{ height: 60 }}>
+            <Image
+              src={'/sign-up.webp'}
+              alt="Sign up"
+              fill={true}
+              className="object-contain w-full h-full"
+            />
+          </figure>
+          <SubEventSignUp
+            label={
+              <p>
+                H.Koumori x Adidas Exhibition
+                <br />
+                Wed 28th – thu 30th jan
+              </p>
+            }
+            sheet="exhibition-01"
+          />
+
+          <SubEventSignUp
+            label={
+              <p>
+                Coffee Course 01 w. La Cabra
+                <br />
+                16:00 – Wed 28th JAN
+              </p>
+            }
+            sheet="coffee-course-01"
+          />
+
+          <SubEventSignUp
+            label={
+              <p>
+                Coffee course 02 w. La cabra
+                <br />
+                16:00 – Wed 28th JAN
+              </p>
+            }
+            sheet="coffee-course-02"
+          />
+
+          <SubEventSignUp
+            label={
+              <p>
+                Sunset Run w. Outdoor Office
+                <br />
+                thu 29th jan – 18:00 - 7km run
+              </p>
+            }
+            sheet="run"
+          />
+
+          <SubEventSignUp
+            label={
+              <p>
+                Sunrise Run 10km w. TTT Athletics
+                <br />
+                07:00 – wed 28th jan
+              </p>
+            }
+            sheet="run-01"
+          />
+
+          <SubEventSignUp
+            label={
+              <p>
+                Sunset Run 7km w. Outdoor Office
+                <br />
+                18:00 – thu 29th JAN
+              </p>
+            }
+            sheet="run-02"
+          />
         </SectionLayout>
       </main>
       <FixedLayout />
