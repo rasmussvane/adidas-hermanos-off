@@ -23,22 +23,22 @@ export default function Home() {
             />
           </figure>
         </SectionLayout>
-        <SectionLayout className="gap-base">
-          {images.map((src, index) => (
-            <figure
-              key={index}
-              className="relative w-full max-w-[480px] aspect-image"
-            >
-              <Image
-                src={src}
-                fill
-                alt=""
-                sizes="(max-width: 480px) 100vw, 480px"
-                loading="eager"
-              />
-            </figure>
-          ))}
-        </SectionLayout>
+        {/* <SectionLayout className="gap-base"> */}
+        {/*   {images.map((src, index) => ( */}
+        {/*     <figure */}
+        {/*       key={index} */}
+        {/*       className="relative w-full max-w-[480px] aspect-image" */}
+        {/*     > */}
+        {/*       <Image */}
+        {/*         src={src} */}
+        {/*         fill */}
+        {/*         alt="" */}
+        {/*         sizes="(max-width: 480px) 100vw, 480px" */}
+        {/*         loading="eager" */}
+        {/*       /> */}
+        {/*     </figure> */}
+        {/*   ))} */}
+        {/* </SectionLayout> */}
         <SectionLayout className="mix-blend-plus-lighter">
           <div className="max-w-none font-sans text-center rich-text text-base/5 md:max-w-2/3">
             <p>
