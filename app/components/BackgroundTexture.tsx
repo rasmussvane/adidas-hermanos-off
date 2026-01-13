@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useGSAP } from "@gsap/react";
-import { gsap } from "gsap";
-import classNames from "classnames";
-import { useRef } from "react";
+import { useGSAP } from '@gsap/react';
+import classNames from 'classnames';
+import { gsap } from 'gsap';
+import { useRef } from 'react';
 
-const animationClass = "gradient";
-const duration = 6;
+const animationClass = 'gradient';
+const duration = 10;
 
 export default function BackgroundTexture() {
   const ref = useRef<HTMLDivElement>(null);
@@ -14,18 +14,25 @@ export default function BackgroundTexture() {
   useGSAP(
     () => {
       const boxNodes =
-        ref.current?.querySelectorAll(`.${animationClass}`) ?? [];
-      const boxArray = [...boxNodes].reverse().slice(0, -1);
+        ref.current?.querySelectorAll('.' + animationClass) ?? [];
+      const boxes = [...boxNodes]; // Convert from node-list to array
 
-      gsap.to(boxArray, {
-        opacity: 0,
-        duration,
-        repeat: -1,
-        yoyo: true,
-        repeatDelay: duration,
+      if (boxes.length === 0) return;
+
+      gsap.set(boxes.slice(1), { opacity: 0 });
+
+      const tl = gsap.timeline({ repeat: -1 });
+
+      boxes.forEach((box, index) => {
+        const nextIndex = (index + 1) % boxes.length;
+        tl.to(box, { opacity: 0, duration }).to(
+          boxes[nextIndex],
+          { opacity: 1, duration },
+          '<'
+        );
       });
     },
-    { scope: ref },
+    { scope: ref }
   );
 
   return (
@@ -37,9 +44,9 @@ export default function BackgroundTexture() {
             <div
               key={index}
               className={classNames(
-                "absolute inset-0",
+                'absolute inset-0',
                 gradient,
-                animationClass,
+                animationClass
               )}
             />
           );
