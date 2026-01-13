@@ -15,7 +15,7 @@ export default function Home() {
             style={{ maxWidth: 500, minHeight: 300 }}
           >
             <Image
-              src="/text-lockup.webp"
+              src="/Hero_text.webp"
               loading="eager"
               className="w-full h-full object-contain"
               fill
