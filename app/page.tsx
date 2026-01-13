@@ -42,21 +42,18 @@ export default function Home() {
         <SectionLayout className="mix-blend-plus-lighter">
           <div className="max-w-none font-sans text-center rich-text text-base/5 md:max-w-2/3">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-              auctor, ex id laoreet rhoncus, nisi urna accumsan ipsum, in
-              hendrerit dui nulla gravida arcu. Integer sit amet neque semper,
-              malesuada metus eget, viverra velit. Aliquam eget ipsum blandit,
-              volutpat justo sed, tristique ligula.
+              The adidas and Hermanos Koumori collaboration unites performance
+              engineering with cultural expression, redefining running as both a
+              physical act and a deeper state of awareness. At its heart, the
+              woven Adizero EVO SL embodies the feeling of fast—lightweight,
+              precise, and purposeful. This vision extends into an apparel
+              collection that blends minimalist design with functional detail,
+              built for freedom of motion across streets, trails, and inner
+              journeys alike. Guided by Hermanos Koumori’s belief that every
+              stride connects the visible and the unseen, this partnership
+              champions runners who seek progress not only in pace, but in
+              perspective.
             </p>
-            <p>
-              Suspendisse lorem lacus, ornare in ligula id, imperdiet euismod
-              ligula. Donec auctor fermentum pellentesque. Vestibulum faucibus
-              nibh id rutrum fringilla. Quisque eu neque sed arcu pretium
-              semper. Nulla quis nibh vel velit luctus convallis a vitae eros.
-              Integer commodo libero at magna ornare, tincidunt faucibus arcu
-              pharetra. Quisque dapibus arcu.
-            </p>
-            <p>H.Koumori x Adidas</p>
           </div>
         </SectionLayout>
         <SectionLayout className="mix-blend-plus-lighter gap-10 font-seven-segments">
