@@ -19,7 +19,7 @@ export default function Home() {
               loading="eager"
               className="w-full h-full object-contain"
               fill
-              alt="Adidas X Hermanos Koumori. Copenhagen showroom. 27. 01. 2026"
+              alt="Adidas. H.Koumori. CPHFW EXHIBITION. 28-30/01/2026, 12:00-18:00"
             />
           </figure>
         </SectionLayout>
