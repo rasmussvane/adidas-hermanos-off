@@ -1,9 +1,13 @@
 const images = [
-  '/hermanoskoumori_1750172830_3657037222973583231_6118973940.webp',
-  '/hermanoskoumori_1750172830_3657037222982124014_6118973940.webp',
-  '/hermanoskoumori_1750172830_3657037222982157040_6118973940.webp',
-  '/hermanoskoumori_1750172830_3657037223116266997_6118973940.webp',
-  '/hermanoskoumori_1750172830_3657037223242081207_6118973940.webp',
+  '/1.webp',
+  '/2.webp',
+  '/3.webp',
+  '/4.webp',
+  '/5.webp',
+  '/6.webp',
+  '/7.webp',
+  '/8.webp',
+  '/9.webp',
 ];
 
 export default images;
