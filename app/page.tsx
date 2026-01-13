@@ -3,7 +3,7 @@ import FixedLayout from './components/FixedLayout';
 import Image from 'next/image';
 import SectionLayout from './components/SectionLayout';
 import images from './components/constants/images';
-import SubEventSignUp from './components/SubEventSignup';
+import SignUpForm from './components/SignUpForm';
 
 export default function Home() {
   return (
@@ -66,7 +66,7 @@ export default function Home() {
             />
           </figure>
 
-          <SubEventSignUp
+          <SignUpForm
             label={
               <p>
                 H. KOUMORI X ADIDAS EXHIBITION
@@ -77,7 +77,7 @@ export default function Home() {
             sheet="exhibition"
           />
 
-          <SubEventSignUp
+          <SignUpForm
             label={
               <p>
                 COFFEE COURSE 01 W. LA CABRA
@@ -88,7 +88,7 @@ export default function Home() {
             sheet="coffee-course-01"
           />
 
-          <SubEventSignUp
+          <SignUpForm
             label={
               <p>
                 COFFEE COURSE 02 W. LA CABRA
@@ -99,7 +99,7 @@ export default function Home() {
             sheet="coffee-course-02"
           />
 
-          <SubEventSignUp
+          <SignUpForm
             label={
               <p>
                 SUNRISE RUN 10KM W. TTTT ATHLETICS
@@ -109,7 +109,7 @@ export default function Home() {
             }
             sheet="run-sun-rise"
           />
-          <SubEventSignUp
+          <SignUpForm
             label={
               <p>
                 SUNSET RUN 7KM W. OUTDOOR OFFICE

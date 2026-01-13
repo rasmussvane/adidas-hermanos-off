@@ -3,7 +3,7 @@
 import { useWindowSize } from '@uidotdev/usehooks';
 import SunTimer from './SunTimer';
 import Image from 'next/image';
-import MainEventSignUp from './MainEventSignUp';
+import SignUpForm from './SignUpForm';
 
 const mobileBreakpoint = 512;
 
@@ -36,7 +36,7 @@ export default function FixedLayout() {
               className="object-contain object-bottom"
             />
           </figure>
-          <MainEventSignUp />
+          <SignUpForm label={<p>Showroom sign up</p>} sheet="main-event" />
         </footer>
       </>
     );
@@ -62,7 +62,7 @@ export default function FixedLayout() {
       </div>
       <footer className="flex fixed bottom-0 left-0 justify-center items-end p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
         <div className="text-lg leading-none text-center">
-          <MainEventSignUp />
+          <SignUpForm label={<p>Showroom sign up</p>} sheet="main-event" />
         </div>
       </footer>
     </>
