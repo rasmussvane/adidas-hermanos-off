@@ -65,23 +65,24 @@ export default function Home() {
               className="object-contain w-full h-full"
             />
           </figure>
+
           <SubEventSignUp
             label={
               <p>
-                H.Koumori x Adidas Exhibition
+                H. KOUMORI X ADIDAS EXHIBITION
                 <br />
-                Wed 28th – thu 30th jan
+                WED 28TH – THU 30TH JAN
               </p>
             }
-            sheet="exhibition-01"
+            sheet="exhibition"
           />
 
           <SubEventSignUp
             label={
               <p>
-                Coffee Course 01 w. La Cabra
+                COFFEE COURSE 01 W. LA CABRA
                 <br />
-                16:00 – Wed 28th JAN
+                WED 28TH JAN – 17:00
               </p>
             }
             sheet="coffee-course-01"
@@ -90,9 +91,9 @@ export default function Home() {
           <SubEventSignUp
             label={
               <p>
-                Coffee course 02 w. La cabra
+                COFFEE COURSE 02 W. LA CABRA
                 <br />
-                16:00 – Wed 28th JAN
+                THU 29TH JAN – 13:00
               </p>
             }
             sheet="coffee-course-02"
@@ -101,34 +102,22 @@ export default function Home() {
           <SubEventSignUp
             label={
               <p>
-                Sunset Run w. Outdoor Office
+                SUNRISE RUN 10KM W. TTTT ATHLETICS
                 <br />
-                thu 29th jan – 18:00 - 7km run
+                07:00 – WED 28TH JAN
               </p>
             }
-            sheet="run"
+            sheet="run-sun-rise"
           />
-
           <SubEventSignUp
             label={
               <p>
-                Sunrise Run 10km w. TTT Athletics
+                SUNSET RUN 7KM W. OUTDOOR OFFICE
                 <br />
-                07:00 – wed 28th jan
+                18:00 – THU 29TH JAN
               </p>
             }
-            sheet="run-01"
-          />
-
-          <SubEventSignUp
-            label={
-              <p>
-                Sunset Run 7km w. Outdoor Office
-                <br />
-                18:00 – thu 29th JAN
-              </p>
-            }
-            sheet="run-02"
+            sheet="run-sun-set"
           />
         </SectionLayout>
       </main>
