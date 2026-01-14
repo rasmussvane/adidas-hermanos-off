@@ -54,6 +54,16 @@ export default function Home() {
               champions runners who seek progress not only in pace, but in
               perspective.
             </p>
+
+            <p>
+              Visit the exhibition and see the collection.
+              <br />
+              Papirøen 73, CPH
+              <br />
+              28th - 29th January
+              <br />
+              10:00 - 18:00.
+            </p>
           </div>
         </SectionLayout>
         <SectionLayout className="mix-blend-plus-lighter gap-10 font-seven-segments">
