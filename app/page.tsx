@@ -101,6 +101,17 @@ export default function Home() {
           <SignUpForm
             label={
               <p>
+                SUNRISE RUN 10KM W. TTTT ATHLETICS
+                <br />
+                07:00 – WED 28TH JAN
+              </p>
+            }
+            sheet="run-sun-rise"
+          />
+
+          <SignUpForm
+            label={
+              <p>
                 COFFEE COURSE 02 W. LA CABRA
                 <br />
                 THU 29TH JAN – 13:00
@@ -109,16 +120,6 @@ export default function Home() {
             sheet="coffee-course-02"
           />
 
-          <SignUpForm
-            label={
-              <p>
-                SUNRISE RUN 10KM W. TTTT ATHLETICS
-                <br />
-                07:00 – WED 28TH JAN
-              </p>
-            }
-            sheet="run-sun-rise"
-          />
           <SignUpForm
             label={
               <p>
