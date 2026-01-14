@@ -69,10 +69,16 @@ export default function Home() {
         <SectionLayout className="mix-blend-plus-lighter gap-10 font-seven-segments">
           <figure className="relative w-full" style={{ height: 60 }}>
             <Image
-              src={'/sign-up.webp'}
+              src={'/sign-up_desktop.webp'}
               alt="Sign up"
               fill={true}
-              className="object-contain w-full h-full"
+              className="object-contain w-full h-full hidden md:block"
+            />
+            <Image
+              src={'/sign-up_mobile.webp'}
+              alt="Sign up"
+              fill={true}
+              className="object-contain w-full h-full block md:hidden"
             />
           </figure>
 
