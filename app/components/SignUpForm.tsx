@@ -1,12 +1,17 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import registerSignup from '../utils/registerSignup';
 import { useForm } from 'react-hook-form';
 import LoadingDots from './LoadingDots';
 import SevenSegmentUnderline from './SevenSegmentUnderline';
 
-export default function MainEventSignUp() {
+type Props = {
+  label: ReactNode;
+  sheet: string;
+};
+
+export default function SignUpForm({ label, sheet }: Props) {
   const { handleSubmit, register } = useForm();
   const [state, setState] = useState<'idle' | 'loading' | 'success' | 'error'>(
     'idle'
@@ -25,7 +30,7 @@ export default function MainEventSignUp() {
     setState('loading');
     const email = data['email'];
 
-    const response = await registerSignup({ email, sheet: 'main-event' });
+    const response = await registerSignup({ email, sheet });
 
     if (response) {
       setState('success');
@@ -53,14 +58,12 @@ export default function MainEventSignUp() {
   }
 
   return (
-    <div className="text-lg leading-none text-center">
+    <div className="text-lg leading-none text-center w-full">
       <form onSubmit={onSubmit} action="#">
-        <div className="relative">
-          <label htmlFor="signup-email">
-            <p>Showroom sign up</p>
-          </label>
+        <div className="flex flex-col justify-center items-center relative">
+          <label htmlFor={sheet}>{label}</label>
           <input
-            id="signup-email"
+            id={sheet}
             type="email"
             className="w-50 text-center"
             {...register('email', { required: true })}
