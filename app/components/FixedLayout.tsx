@@ -23,11 +23,11 @@ export default function FixedLayout() {
   if (layout === 'mobile') {
     return (
       <>
-        <header className="flex fixed top-0 left-0 justify-between p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
+        <header className="grid grid-cols-2 justify-items-center gap-sm fixed top-0 left-0 p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
           <SunTimer location="cdmx" />
           <SunTimer location="cph" />
         </header>
-        <footer className="flex fixed bottom-0 left-0 justify-between items-end p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
+        <footer className="grid grid-cols-2 justify-items-center items-end gap-sm fixed bottom-0 left-0 p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
           <figure style={{ ...logoSize.mobile }} className="relative">
             <Image
               src="/logo.svg"
@@ -36,7 +36,15 @@ export default function FixedLayout() {
               className="object-contain object-bottom"
             />
           </figure>
-          <SignUpForm label={<p>Exhibition Sign Up</p>} sheet="main-event" />
+          <SignUpForm
+            label={
+              <p>
+                Exhibition
+                <br /> Sign Up
+              </p>
+            }
+            sheet="main-event"
+          />
         </footer>
       </>
     );
