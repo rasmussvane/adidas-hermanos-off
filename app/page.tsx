@@ -67,7 +67,7 @@ export default function Home() {
           </div>
         </SectionLayout>
         <SectionLayout className="mix-blend-plus-lighter gap-10 font-seven-segments">
-          <figure className="relative w-full" style={{ height: 60 }}>
+          <figure className="relative w-full h-[120px] md:h-[60px]">
             <Image
               src={'/sign-up_desktop.png'}
               alt="Sign up"
