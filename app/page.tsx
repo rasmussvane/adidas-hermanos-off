@@ -66,7 +66,10 @@ export default function Home() {
             </p>
           </div>
         </SectionLayout>
-        <SectionLayout className="mix-blend-plus-lighter gap-10 font-seven-segments">
+        <SectionLayout
+          id="sign-up"
+          className="mix-blend-plus-lighter gap-10 font-seven-segments"
+        >
           <figure className="relative w-full h-[120px] md:h-[60px]">
             <Image
               src={'/sign-up_desktop.png'}
@@ -81,6 +84,8 @@ export default function Home() {
               className="object-contain w-full h-full block md:hidden"
             />
           </figure>
+
+          <SignUpForm label={<p>Exhibition Sign Up</p>} sheet="main-event" />
 
           <SignUpForm
             label={

@@ -3,7 +3,6 @@
 import { useWindowSize } from '@uidotdev/usehooks';
 import SunTimer from './SunTimer';
 import Image from 'next/image';
-import SignUpForm from './SignUpForm';
 
 const mobileBreakpoint = 512;
 
@@ -16,6 +15,10 @@ const logoSize = {
 
 export default function FixedLayout() {
   const { width } = useWindowSize();
+
+  const handleClick = () => {
+    document.getElementById('sign-up')?.scrollIntoView({ behavior: 'smooth' });
+  };
   const layout = width && width <= mobileBreakpoint ? 'mobile' : 'desktop';
 
   if (!width) return null;
@@ -36,15 +39,15 @@ export default function FixedLayout() {
               className="object-contain object-bottom"
             />
           </figure>
-          <SignUpForm
-            label={
-              <p>
-                Exhibition
-                <br /> Sign Up
-              </p>
-            }
-            sheet="main-event"
-          />
+          <button
+            onClick={handleClick}
+            className="text-right leading-none"
+          >
+            <p>
+              Exhibition
+              <br /> Sign Up
+            </p>
+          </button>
         </footer>
       </>
     );
@@ -69,9 +72,12 @@ export default function FixedLayout() {
         <SunTimer location="cph" />
       </div>
       <footer className="flex fixed bottom-0 left-0 justify-center items-end p-sm md:p-base w-full font-seven-segments mix-blend-plus-lighter">
-        <div className="text-lg leading-none text-center">
-          <SignUpForm label={<p>Exhibition Sign up</p>} sheet="main-event" />
-        </div>
+        <button
+          onClick={handleClick}
+          className="text-lg leading-none text-center"
+        >
+          <p>Exhibition sign up</p>
+        </button>
       </footer>
     </>
   );

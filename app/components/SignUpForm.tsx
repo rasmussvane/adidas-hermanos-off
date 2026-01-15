@@ -60,16 +60,19 @@ export default function SignUpForm({ label, sheet }: Props) {
   return (
     <div className="text-lg leading-none text-center w-full">
       <form onSubmit={onSubmit} action="#">
-        <div className="flex flex-col justify-center items-center relative">
+        <div className="flex flex-col justify-center items-center gap-text">
           <label htmlFor={sheet}>{label}</label>
-          <input
-            id={sheet}
-            type="email"
-            className="w-50 text-center"
-            {...register('email', { required: true })}
-            enterKeyHint="send"
-          />
-          <SevenSegmentUnderline />
+          <div className="flex gap-sm relative">
+            <input
+              id={sheet}
+              type="email"
+              className="w-50"
+              {...register('email', { required: true })}
+              enterKeyHint="send"
+            />
+            <button type="submit">Register</button>
+            <SevenSegmentUnderline length={25} />
+          </div>
         </div>
       </form>
     </div>
