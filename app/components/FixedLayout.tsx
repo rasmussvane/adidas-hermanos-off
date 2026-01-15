@@ -39,14 +39,8 @@ export default function FixedLayout() {
               className="object-contain object-bottom"
             />
           </figure>
-          <button
-            onClick={handleClick}
-            className="text-right leading-none"
-          >
-            <p>
-              Exhibition
-              <br /> Sign Up
-            </p>
+          <button onClick={handleClick} className="text-cetner leading-none">
+            Exhibition Sign Up
           </button>
         </footer>
       </>
@@ -76,7 +70,7 @@ export default function FixedLayout() {
           onClick={handleClick}
           className="text-lg leading-none text-center"
         >
-          <p>Exhibition sign up</p>
+          Exhibition sign up
         </button>
       </footer>
     </>
