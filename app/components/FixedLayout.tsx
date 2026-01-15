@@ -40,7 +40,9 @@ export default function FixedLayout() {
             />
           </figure>
           <button onClick={handleClick} className="text-cetner leading-none">
-            Exhibition Sign Up
+            Exhibition
+            <br />
+            Sign Up
           </button>
         </footer>
       </>
