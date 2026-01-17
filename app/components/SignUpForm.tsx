@@ -60,7 +60,7 @@ export default function SignUpForm({ label, sheet }: Props) {
   return (
     <div className="text-lg leading-none text-center w-full">
       <form onSubmit={onSubmit} action="#">
-        <div className="flex flex-col justify-center items-center gap-text">
+        <div className="flex flex-col justify-center items-center">
           <label htmlFor={sheet}>{label}</label>
           <div className="flex gap-sm relative">
             <input

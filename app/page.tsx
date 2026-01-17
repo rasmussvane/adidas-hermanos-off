@@ -85,8 +85,6 @@ export default function Home() {
             />
           </figure>
 
-          <SignUpForm label={<p>Exhibition Sign Up</p>} sheet="main-event" />
-
           <SignUpForm
             label={
               <p>

@@ -40,9 +40,15 @@ export default function FixedLayout() {
             />
           </figure>
           <button onClick={handleClick} className="text-cetner leading-none">
+<<<<<<< Updated upstream
             Exhibition
             <br />
             Sign Up
+=======
+            EXHIBTION
+            <br />
+            EMAIL SIGN UP
+>>>>>>> Stashed changes
           </button>
         </footer>
       </>
@@ -72,7 +78,9 @@ export default function FixedLayout() {
           onClick={handleClick}
           className="text-lg leading-none text-center"
         >
-          Exhibition sign up
+          EXHIBTION
+          <br />
+          EMAIL SIGN UP
         </button>
       </footer>
     </>
