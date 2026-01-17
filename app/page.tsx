@@ -90,7 +90,7 @@ export default function Home() {
               <p>
                 H. KOUMORI X ADIDAS EXHIBITION
                 <br />
-                WED 28TH – THU 30TH JAN
+                WED 28TH – THU 29TH JAN
               </p>
             }
             sheet="exhibition"
