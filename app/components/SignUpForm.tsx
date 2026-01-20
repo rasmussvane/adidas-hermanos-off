@@ -9,9 +9,10 @@ import SevenSegmentUnderline from './SevenSegmentUnderline';
 type Props = {
   label: ReactNode;
   sheet: string;
+  isFull?: boolean;
 };
 
-export default function SignUpForm({ label, sheet }: Props) {
+export default function SignUpForm({ label, sheet, isFull = false }: Props) {
   const { handleSubmit, register } = useForm();
   const [state, setState] = useState<'idle' | 'loading' | 'success' | 'error'>(
     'idle'
@@ -38,6 +39,15 @@ export default function SignUpForm({ label, sheet }: Props) {
       setState('error');
     }
   });
+
+  if (isFull) {
+    return (
+      <div className="text-lg leading-none text-center w-full">
+        {label}
+        <p>Registration closed Event full</p>
+      </div>
+    );
+  }
 
   if (state === 'loading') {
     return (

@@ -105,6 +105,7 @@ export default function Home() {
               </p>
             }
             sheet="coffee-course-01"
+            isFull={true}
           />
 
           <SignUpForm
@@ -127,6 +128,7 @@ export default function Home() {
               </p>
             }
             sheet="coffee-course-02"
+            isFull={true}
           />
 
           <SignUpForm
