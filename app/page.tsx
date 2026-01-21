@@ -25,15 +25,14 @@ export default function Home() {
         </SectionLayout>
         <SectionLayout className="gap-base">
           {images.map((src, index) => (
-            <figure
-              key={index}
-              className="relative w-full max-w-[480px] aspect-image"
-            >
+            <figure key={index} className="w-full max-w-[480px]">
               <Image
                 src={src}
-                fill
-                alt=""
+                width={480}
+                height={640}
                 sizes="(max-width: 480px) 100vw, 480px"
+                className="w-full h-auto"
+                alt=""
                 loading="eager"
               />
             </figure>
