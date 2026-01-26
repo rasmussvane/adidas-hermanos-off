@@ -23,48 +23,6 @@ export default function Home() {
             />
           </figure>
         </SectionLayout>
-        <SectionLayout className="gap-base">
-          {images.map((src, index) => (
-            <figure key={index} className="w-full max-w-[480px]">
-              <Image
-                src={src}
-                width={480}
-                height={640}
-                sizes="(max-width: 480px) 100vw, 480px"
-                className="w-full h-auto"
-                alt=""
-                loading="eager"
-              />
-            </figure>
-          ))}
-        </SectionLayout>
-        <SectionLayout className="mix-blend-plus-lighter">
-          <div className="max-w-none font-sans text-center rich-text text-base/5 md:max-w-2/3">
-            <p>
-              The adidas and Hermanos Koumori collaboration unites performance
-              engineering with cultural expression, redefining running as both a
-              physical act and a deeper state of awareness. At its heart, the
-              woven Adizero EVO SL embodies the feeling of fast—lightweight,
-              precise, and purposeful. This vision extends into an apparel
-              collection that blends minimalist design with functional detail,
-              built for freedom of motion across streets, trails, and inner
-              journeys alike. Guided by Hermanos Koumori’s belief that every
-              stride connects the visible and the unseen, this partnership
-              champions runners who seek progress not only in pace, but in
-              perspective.
-            </p>
-
-            <p>
-              Visit the exhibition and see the collection.
-              <br />
-              Papirøen 73, CPH
-              <br />
-              28th - 29th January
-              <br />
-              10:00 - 18:00.
-            </p>
-          </div>
-        </SectionLayout>
         <SectionLayout
           id="sign-up"
           className="mix-blend-plus-lighter gap-10 font-seven-segments"
@@ -140,6 +98,47 @@ export default function Home() {
             }
             sheet="run-sun-set"
           />
+        </SectionLayout>
+        <SectionLayout className="gap-base">
+          {images.map((src, index) => (
+            <figure key={index} className="w-full max-w-[480px]">
+              <Image
+                src={src}
+                width={480}
+                height={640}
+                sizes="(max-width: 480px) 100vw, 480px"
+                className="w-full h-auto"
+                alt=""
+                loading="eager"
+              />
+            </figure>
+          ))}
+        </SectionLayout>
+        <SectionLayout className="mix-blend-plus-lighter">
+          <div className="max-w-none font-sans text-center rich-text text-base/5 md:max-w-2/3">
+            <p>
+              The adidas and Hermanos Koumori collaboration unites performance
+              engineering with cultural expression, redefining running as both a
+              physical act and a deeper state of awareness. At its heart, the
+              woven Adizero EVO SL embodies the feeling of fast—lightweight,
+              precise, and purposeful. This vision extends into an apparel
+              collection that blends minimalist design with functional detail,
+              built for freedom of motion across streets, trails, and inner
+              journeys alike. Guided by Hermanos Koumori’s belief that every
+              stride connects the visible and the unseen, this partnership
+              champions runners who seek progress not only in pace, but in
+              perspective.
+            </p>
+            <p>
+              Visit the exhibition and see the collection.
+              <br />
+              Papirøen 73, CPH
+              <br />
+              28th - 29th January
+              <br />
+              10:00 - 18:00.
+            </p>
+          </div>
         </SectionLayout>
       </main>
       <FixedLayout />
